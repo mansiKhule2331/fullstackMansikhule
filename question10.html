@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Checker</title>
+</head>
+<body>
+    <h2>Weather & Temperature Checker</h2>
+    <input type="text" id="weather" placeholder="Enter weather (Sunny/Rainy)">
+    <input type="number" id="temperature" placeholder="Enter temperature">
+    <button onclick="checkWeather()">Check</button>
+    <p id="result"></p>
+    <script>
+        function checkWeather() {
+            var weather = document.getElementById("weather").value;
+            var temp = document.getElementById("temperature").value;
+            if (weather === "") {
+                document.getElementById("result").innerHTML = "Please enter weather";
+                return;
+            }
+            weather = weather.toLowerCase(); // make case-insensitive
+            if (weather === "sunny") {
+                if (temp === "") {
+                    document.getElementById("result").innerHTML = "Please enter temperature";
+                    return;
+                }
+                temp = parseFloat(temp);
+                if (temp > 30) {
+                    document.getElementById("result").innerHTML = "Wear sunscreen";
+                } else {
+                    document.getElementById("result").innerHTML = "Enjoy the day";
+                }
+            } 
+            else if (weather === "rainy") {
+                document.getElementById("result").innerHTML = "Take an umbrella";
+            } 
+            else {
+                document.getElementById("result").innerHTML = "Invalid weather type";
+            }
+        }
+    </script>
+</body>
+</html>
