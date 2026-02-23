@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial using do...while</title>
+</head>
+<body>
+
+    <h2>Factorial of 5</h2>
+    <p id="result"></p>
+
+    <script>
+        let number = 5;
+        let factorial = 1;
+        let i = 1;
+
+        do {
+            factorial *= i;
+            i++;
+        } while (i <= number);
+
+        document.getElementById("result").innerHTML =
+            "Factorial of " + number + " is: " + factorial;
+    </script>
+
+</body>
+</html>

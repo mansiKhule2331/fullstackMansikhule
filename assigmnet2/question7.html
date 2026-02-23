@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>First Number Divisible by 7 After 500</title>
+</head>
+<body>
+
+    <h2>First Number After 500 Divisible by 7</h2>
+    <p id="result"></p>
+
+    <script>
+        let number = 501;   // Start checking after 500
+        while (true) {
+            if (number % 7 === 0) {
+                break;      // Stop loop when condition is true
+            }
+            number++;
+        }
+        document.getElementById("result").innerHTML =
+            "The first number after 500 divisible by 7 is: " + number;
+    </script>
+</body>
+</html>
