@@ -3,70 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Portfolio Header</title>
+    <title>Financial Performance Dashboard</title>
     <style>
-        /* Base Styles */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', sans-serif; background: #fafafa; }
-
-        /* Navigation Bar */
-        nav {
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 40px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 5%;
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .logo { font-size: 1.5rem; font-weight: 800; color: #333; text-decoration: none; }
-
-        .nav-links { list-style: none; display: flex; gap: 2rem; }
-        .nav-links a { text-decoration: none; color: #666; font-weight: 500; transition: 0.3s; }
-        .nav-links a:hover { color: #007bff; }
-
-        /* Hero Section */
-        .hero {
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 10%;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
 
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; color: #222; }
-        .hero p { font-size: 1.2rem; color: #555; max-width: 600px; }
+        /* Box Model: Layout Design */
+        .report-card {
+            width: 100%;
+            max-width: 900px;
+            background-color: #ffffff;
+            padding: 30px; /* Internal spacing */
+            margin: 0 auto; /* Centering */
+            border: 1px solid #dee2e6; /* Border property */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
 
-        /* Responsive Breakpoint: < 600px */
-        @media screen and (max-width: 600px) {
-            nav { justify-content: center; } /* Centers the logo container */
-            
-            .nav-links { display: none; } /* Hides secondary links */
-            
-            .logo { text-align: center; }
+        h1 {
+            color: #212529;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
 
-            .hero h1 { font-size: 2.5rem; }
+        /* Table Specific Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Collapses borders into one */
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 15px; /* Spacing within cells */
+            text-align: center; /* Alignment */
+            border: 1px solid #ced4da;
+        }
+
+        /* Styling Table Headers */
+        thead th {
+            background-color: #343a40;
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Rowspan/Colspan Styling */
+        .category-header {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        /* Colors for Sales and Profit */
+        .sales-val { color: #007bff; font-weight: bold; }
+        .profit-val { color: #28a745; font-weight: bold; }
+
+        /* Hover Effects */
+        tbody tr:hover {
+            background-color: #f1f3f5;
+            transition: 0.2s ease-in-out;
+        }
+
+        /* Footer summary style */
+        .total-row {
+            background-color: #e2e3e5;
+            font-weight: 800;
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#" class="logo">CREATIVE.CO</a>
-        <ul class="nav-links">
-            <li><a href="#work">Work</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="report-card">
+        <h1>Annual Sales & Profit Report</h1>
 
-    <header class="hero">
-        <h1>Hi, I'm a Designer.</h1>
-        <p>I build modern, high-performance digital experiences that help brands grow and connect with their audience.</p>
-    </header>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">Year</th>
+                    <th rowspan="2">Quarter</th>
+                    <th colspan="2">Electronics</th>
+                    <th colspan="2">Furniture</th>
+                </tr>
+                <tr>
+                    <th>Sales</th>
+                    <th>Profit</th>
+                    <th>Sales</th>
+                    <th>Profit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Year 2024 with Rowspan -->
+                <tr>
+                    <td rowspan="2" class="category-header">2024</td>
+                    <td>Q1</td>
+                    <td class="sales-val">$45,000</td>
+                    <td class="profit-val">$12,000</td>
+                    <td class="sales-val">$20,000</td>
+                    <td class="profit-val">$5,000</td>
+                </tr>
+                <tr>
+                    <td>Q2</td>
+                    <td class="sales-val">$52,000</td>
+                    <td class="profit-val">$15,000</td>
+                    <td class="sales-val">$25,000</td>
+                    <td class="profit-val">$7,500</td>
+                </tr>
+
+                <!-- Year 2025 -->
+                <tr>
+                    <td rowspan="2" class="category-header">2025</td>
+                    <td>Q1</td>
+                    <td class="sales-val">$60,000</td>
+                    <td class="profit-val">$20,000</td>
+                    <td class="sales-val">$30,000</td>
+                    <td class="profit-val">$9,000</td>
+                </tr>
+                <tr>
+                    <td>Q2</td>
+                    <td class="sales-val">$68,000</td>
+                    <td class="profit-val">$22,000</td>
+                    <td class="sales-val">$35,000</td>
+                    <td class="profit-val">$11,000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="2">Annual Grand Total</td>
+                    <td colspan="2" class="sales-val">$225,000 Sales / $69,000 Profit</td>
+                    <td colspan="2" class="sales-val">$110,000 Sales / $32,500 Profit</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
 
 </body>
 </html>

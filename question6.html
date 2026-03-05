@@ -3,94 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Bistro Menu</title>
+    <title>Academic Schedule | 2026</title>
     <style>
-        :root {
-            /* Dynamic sizing using clamp(min, preferred, max) */
-            --title-font: clamp(1.5rem, 5vw, 3rem);
-            --item-font: clamp(1.1rem, 2.5vw, 1.6rem);
-            --desc-font: clamp(0.9rem, 1.5vw, 1.1rem);
-            --img-size: clamp(80px, 15vw, 150px);
-        }
+        /* Base Styling */
         body {
-            font-family: 'Georgia', serif;
-            background-color: #faf7f2;
-            color: #2c2c2c;
-            line-height: 1.6;
-            padding: clamp(20px, 5%, 60px);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            color: #2d3436;
         }
-        .menu-container {
-            max-width: 900px;
-            margin: 0 auto;
-            border: 2px solid #d4af37;
-            padding: 30px;
-            background: white;
+
+        /* Box Model: Main Wrapper */
+        .timetable-card {
+            max-width: 1000px;
+            width: 95%; /* Responsive width */
+            margin: 40px auto; /* Centers the card horizontally */
+            background-color: #ffffff;
+            padding: 30px; /* Internal spacing from table to border */
+            border: 1px solid #d1d9e6;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
+
         h1 {
             text-align: center;
-            font-size: var(--title-font);
-            color: #8b0000;
-            margin-bottom: 2rem;
+            color: #0984e3;
+            margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-        /* Description List Styling */
-        .menu-item {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 2rem;
-            align-items: flex-start;
+
+        p.subtitle {
+            text-align: center;
+            color: #636e72;
+            margin-bottom: 30px;
         }
-        .menu-img {
-            width: var(--img-size);
-            height: var(--img-size);
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid #eee;
-            flex-shrink: 0;
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Removes gaps between borders */
+            border-spacing: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid #dfe6e9;
         }
-        dl { flex-grow: 1; margin: 0; }
-        dt {
-            font-size: var(--item-font);
+
+        /* Table Headers */
+        th {
+            background-color: #0984e3;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* Table Cells */
+        td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #dfe6e9;
+            font-size: 0.95rem;
+        }
+
+        /* Box Model: Specific Cell Padding/Margin effect */
+        .day-column {
+            background-color: #f9f9f9;
             font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px dotted #ccc;
+            color: #2d3436;
+            width: 15%;
         }
-        dd {
-            font-size: var(--desc-font);
-            color: #666;
-            margin: 5px 0 0 0;
+
+        .break {
+            background-color: #fff3e0;
             font-style: italic;
+            color: #e67e22;
+            font-weight: bold;
         }
-        .price { color: #8b0000; }
+
+        /* Hover Effects */
+        tbody tr:hover {
+            background-color: #f1f7ff; /* Subtle blue highlight */
+            transition: background-color 0.3s ease;
+            cursor: default;
+        }
+
+        /* Accent for specific subjects */
+        .lab-session {
+            border-left: 5px solid #00b894;
+        }
     </style>
 </head>
 <body>
-    <div class="menu-container">
-        <h1>Summer Bistro Menu</h1>
-        <!-- Menu Item 1 -->
-        <div class="menu-item">
-            <img src="../image1.jpg" alt="Truffle Pasta" class="menu-img">
-            <dl>
-                <dt>
-                    <span>Wild Mushroom Truffle Pasta</span>
-                    <span class="price">$24</span>
-                </dt>
-                <dd>Hand-rolled tagliatelle, seasonal wild mushrooms, shaved black truffle, and aged parmesan cream.</dd>
-            </dl>
-        </div>
-        <!-- Menu Item 2 -->
-        <div class="menu-item">
-            <img src="../image2.webp" alt="Seared Salmon" class="menu-img">
-            <dl>
-                <dt>
-                    <span>Atlantic Pan-Seared Salmon</span>
-                    <span class="price">$32</span>
-                </dt>
-                <dd>Crispy skin salmon served over a bed of lemon-infused quinoa and roasted asparagus.</dd>
-            </dl>
-        </div>
+
+    <div class="timetable-card">
+        <h1>Department of Computer Science</h1>
+        <p class="subtitle">Weekly Academic Schedule - Semester IV (2026)</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Day / Time</th>
+                    <th>09:00 - 10:00</th>
+                    <th>10:00 - 11:00</th>
+                    <th>11:00 - 11:15</th>
+                    <th>11:15 - 12:15</th>
+                    <th>12:15 - 01:15</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="day-column">Monday</td>
+                    <td>Data Structures</td>
+                    <td>Mathematics IV</td>
+                    <td rowspan="5" class="break">B<br>R<br>E<br>A<br>K</td>
+                    <td>Operating Systems</td>
+                    <td class="lab-session">Python Lab</td>
+                </tr>
+                <tr>
+                    <td class="day-column">Tuesday</td>
+                    <td>Operating Systems</td>
+                    <td>Software Eng.</td>
+                    <td>Data Structures</td>
+                    <td class="lab-session">DBMS Lab</td>
+                </tr>
+                <tr>
+                    <td class="day-column">Wednesday</td>
+                    <td colspan="2" class="lab-session">Full Stack Development Workshop</td>
+                    <td>Mathematics IV</td>
+                    <td>Aptitude</td>
+                </tr>
+                <tr>
+                    <td class="day-column">Thursday</td>
+                    <td>Software Eng.</td>
+                    <td>DBMS</td>
+                    <td>Data Structures</td>
+                    <td>Library</td>
+                </tr>
+                <tr>
+                    <td class="day-column">Friday</td>
+                    <td>Mathematics IV</td>
+                    <td>Operating Systems</td>
+                    <td>DBMS</td>
+                    <td>Sports / Club</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>

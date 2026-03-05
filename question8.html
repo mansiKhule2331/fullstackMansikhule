@@ -3,95 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Modern Layout</title>
+    <title>Classic Margherita Pizza Recipe</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: #f9fafb; color: #1f2937; line-height: 1.6; }
-        .container { max-width: 1100px; margin: 50px auto; padding: 20px; }        
-        /* Flexbox Wrapper */
-        .contact-wrapper {
-            display: flex;
-            flex-wrap: wrap; /* Allows wrapping on mobile */
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        /* General Styles */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #fdf5e6; /* Old Lace background */
+            margin: 0;
+            padding: 50px 20px;
+            color: #444;
         }
-        /* Form and Map Sections */
-        .form-section, .map-section {
-            width: 100%; /* Default 100% for mobile */
-            padding: 40px;
+
+        /* Box Model: Recipe Container */
+        .recipe-card {
+            max-width: 650px;
+            width: 100%; /* Width Property */
+            margin: 0 auto; /* Margin for Centering */
+            background-color: #ffffff;
+            padding: 40px; /* Internal Padding */
+            border: 1px solid #e0d5c1; /* Border Property */
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
         }
-        /* Desktop Layout: Side-by-Side */
-        @media (min-width: 768px) {
-            .form-section, .map-section {
-                width: 50%; /* Stays at 50% on wide screens */
-            }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #e67e22;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
         }
-        /* Form Styling */
-        h2 { margin-bottom: 20px; font-size: 1.8rem; }
-        .input-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: 500; }
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #d1d5db;
-            border-radius: 6px;
-            font-size: 1rem;
+
+        h1 { color: #d35400; margin: 0; }
+        h2 { color: #27ae60; font-size: 1.5rem; margin-top: 30px; }
+
+        /* List Styling & Line Height */
+        ul, ol {
+            line-height: 1.8; /* Line-height property for readability */
+            margin-bottom: 20px;
+            padding-left: 25px;
         }
-        button {
-            background: #2563eb;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 6px;
+
+        /* Unordered List: Ingredients */
+        ul {
+            list-style-type: disc; /* List-style-type property */
+            background-color: #f9f9f9;
+            padding: 20px 40px;
+            border-radius: 5px;
+        }
+
+        /* Ordered List: Steps */
+        ol {
+            list-style-type: decimal;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 5px;
+            transition: transform 0.2s ease;
+        }
+
+        /* Hover Effect */
+        li:hover {
+            background-color: #fff9f0;
+            transform: translateX(5px); /* Subtle shift on hover */
             cursor: pointer;
+        }
+
+        .highlight {
             font-weight: bold;
-            transition: background 0.3s;
+            color: #d35400;
         }
-        button:hover { background: #1d4ed8; }
-        /* Map Section Styling */
-        .map-section {
-            background: #e5e7eb;
-            padding: 0; /* Remove padding to make map flush */
-            min-height: 300px;
-        }
-        .map-section iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #999;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="contact-wrapper">
-            <!-- Contact Form -->
-            <div class="form-section">
-                <h2>Get in Touch</h2>
-                <form>
-                    <div class="input-group">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="John Doe">
-                    </div>
-                    <div class="input-group">
-                        <label>Email Address</label>
-                        <input type="email" placeholder="john@example.com">
-                    </div>
-                    <div class="input-group">
-                        <label>Message</label>
-                        <textarea rows="5" placeholder="How can we help?"></textarea>
-                    </div>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-            <!-- Embedded Map -->
-            <div class="map-section">
-                <!-- Replace URL with your actual Google Maps embed link -->
-                <iframe src="../google.png" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
+
+    <div class="recipe-card">
+        <header>
+            <h1>Margherita Pizza</h1>
+            <p>Fresh, simple, and Italian classic.</p>
+        </header>
+
+        <h2>Ingredients Needed</h2>
+        <!-- Unordered List -->
+        <ul>
+            <li>250g <span class="highlight">Pizza Dough</span></li>
+            <li>1/2 cup Tomato San Marzano sauce</li>
+            <li>100g Fresh Mozzarella cheese</li>
+            <li>4-5 Fresh Basil leaves</li>
+            <li>1 tbsp Extra virgin olive oil</li>
+            <li>A pinch of Sea salt</li>
+        </ul>
+
+        <h2>Preparation Steps</h2>
+        <!-- Ordered List -->
+        <ol>
+            <li>Preheat your oven to <span class="highlight">250°C (480°F)</span> for at least 30 minutes.</li>
+            <li>Roll out the dough on a floured surface to a 12-inch circle.</li>
+            <li>Spread the tomato sauce evenly, leaving 1 inch around the edge for the crust.</li>
+            <li>Tear the fresh mozzarella into chunks and place them over the sauce.</li>
+            <li>Drizzle with olive oil and sprinkle a pinch of salt.</li>
+            <li>Bake for 8-10 minutes until the crust is charred and cheese is bubbly.</li>
+            <li>Top with fresh basil leaves immediately after removing from the oven.</li>
+        </ol>
+
+        <footer>
+            Preparation time: 15 mins | Cook time: 10 mins
+        </footer>
     </div>
 
 </body>

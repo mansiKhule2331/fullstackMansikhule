@@ -3,120 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Tech Summit 2026 | Footer</title>
+    <title>NovaStream Technologies | Innovation Redefined</title>
     <style>
-        /* Base Reset & Styling */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; }
-
-        footer {
-            background-color: #1a1a1a;
-            color: #ffffff;
-            padding: 60px 5% 30px;
+        /* CSS Fundamentals: Font and Background */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #2d3436;
+            margin: 0;
+            padding: 0;
         }
 
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap; /* Essential for mobile collapsing */
-            justify-content: space-between;
-            gap: 40px;
+        /* Box Model: Main Layout Container */
+        .company-wrapper {
+            width: 80%; /* Width Property */
+            max-width: 900px;
+            margin: 50px auto; /* Margin for Centering */
+            background-color: #ffffff;
+            padding: 40px; /* Internal Padding */
+            border-top: 8px solid #6c5ce7; /* Border Property for accent */
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
-        /* Footer Column Logic */
-        .footer-col {
-            flex: 1 1 250px; /* Grow/Shrink with a base of 250px */
+        /* Typography and Alignment */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
         }
 
-        .footer-col h4 {
+        h1 {
+            color: #6c5ce7; /* Brand Color */
+            font-size: 2.8rem;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            color: #b2bec3;
+            font-style: italic;
             font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        /* Paragraph Styling */
+        .about-section p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-bottom: 25px;
+        }
+
+        /* List Styling: Organization Values */
+        .values-box {
+            background-color: #f9f9ff;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        h2 {
+            color: #2d3436;
+            border-left: 5px solid #6c5ce7;
+            padding-left: 15px;
             margin-bottom: 20px;
-            color: #00d4ff; /* 2026 Event Theme Color */
         }
 
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 12px; }
-        .footer-col a { color: #ccc; text-decoration: none; transition: 0.3s; }
-        .footer-col a:hover { color: #fff; }
-
-        /* Newsletter Signup */
-        .newsletter input {
-            padding: 10px;
-            width: 70%;
-            border: none;
-            border-radius: 4px 0 0 4px;
+        ul {
+            list-style-type: none; /* Customizing list appearance */
+            padding: 0;
         }
 
-        .newsletter button {
-            padding: 10px 15px;
-            border: none;
-            background: #00d4ff;
-            color: #000;
-            font-weight: bold;
-            border-radius: 0 4px 4px 0;
+        li {
+            background: white;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            transition: all 0.3s ease; /* Hover Transition */
+        }
+
+        /* Hover Effects */
+        li:hover {
+            transform: scale(1.02); /* Slight zoom */
+            background-color: #6c5ce7;
+            color: white;
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
             cursor: pointer;
         }
 
-        /* Responsive Breakpoint (< 768px) */
-        @media screen and (max-width: 768px) {
-            .footer-container {
-                flex-direction: column; /* Stack vertically */
-                align-items: center;
-                text-align: center;
-            }
-
-            .newsletter input { width: 100%; border-radius: 4px; margin-bottom: 10px; }
-            .newsletter button { width: 100%; border-radius: 4px; }
-        }
-
-        .copyright {
+        footer {
             text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #333;
+            margin-top: 40px;
             font-size: 0.9rem;
-            color: #666;
+            color: #636e72;
         }
     </style>
 </head>
 <body>
 
-    <!-- Main Content Placeholder -->
-    <div style="height: 50vh;"></div>
+    <div class="company-wrapper">
+        <header>
+            <h1>NovaStream Technologies</h1>
+            <p class="tagline">Streaming the future, today.</p>
+        </header>
 
-    <footer>
-        <div class="footer-container">
-            <!-- Column 1: Event Info -->
-            <div class="footer-col">
-                <h4>TechSummit 2026</h4>
-                <p>The world's largest gathering of AI and Robotics experts. Joining 50+ countries in Tokyo.</p>
-            </div>
+        <section class="about-section">
+            <h2>Who We Are</h2>
+            <p>
+                Founded in 2018, <strong>NovaStream Technologies</strong> is a global leader in cloud-native solutions and AI-driven data analytics. We specialize in building scalable infrastructure that empowers businesses to process information at the speed of thought. Our mission is to bridge the gap between complex technology and human intuition.
+            </p>
+        </section>
 
-            <!-- Column 2: Quick Links -->
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="#">Agenda</a></li>
-                    <li><a href="#">Speakers</a></li>
-                    <li><a href="#">Sponsorship</a></li>
-                </ul>
-            </div>
+        <section class="values-box">
+            <h2>Our Core Values</h2>
+            <ul>
+                <li><strong>Innovation First:</strong> We never settle for the status quo.</li>
+                <li><strong>Client Obsession:</strong> Your growth is our primary metric of success.</li>
+                <li><strong>Sustainability:</strong> Building high-performance code with a low carbon footprint.</li>
+                <li><strong>Integrity:</strong> Transparency in every line of code and every contract.</li>
+            </ul>
+        </section>
 
-            <!-- Column 3: Newsletter -->
-            <div class="footer-col newsletter">
-                <h4>Stay Updated</h4>
-                <form>
-                    <input type="email" placeholder="Your Email">
-                    <button type="submit">Join</button>
-                </form>
-            </div>
-        </div>
-
-        <div class="copyright">
-            &copy; 2026 Global Tech Summit. All rights reserved.
-        </div>
-    </footer>
+        <footer>
+            &copy; 2026 NovaStream Technologies Inc. | San Francisco • Bengaluru • London
+        </footer>
+    </div>
 
 </body>
 </html>

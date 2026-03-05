@@ -3,83 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Pricing Table</title>
+    <title>Web Development Learning Guide</title>
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; padding: 40px 20px; }
-        /* Flexbox Container */
-        .pricing-wrapper {
-            display: flex;
-            flex-direction: column; /* Mobile first: Vertical stack */
-            gap: 20px;
-            max-width: 1100px;
-            margin: 0 auto;
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
         }
-        /* Desktop Layout (Wide Screens) */
-        @media (min-width: 768px) {
-            .pricing-wrapper {
-                flex-direction: row; /* Horizontal row */
-                justify-content: center;
-                align-items: stretch;
-            }
-        }
-        /* Individual Card Styles */
-        .pricing-card {
-            flex: 1;
-            background: #fff;
-            border: 1px solid #ddd;
+
+        /* Box Model: Container Layout */
+        .content-box {
+            max-width: 700px;
+            margin: 0 auto; /* Centering */
+            background-color: #ffffff;
+            padding: 40px; /* Internal spacing */
+            border: 1px solid #e0e0e0;
             border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
-        .pricing-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        /* Highlight the Pro plan */
-        .pro-plan { border: 2px solid #007bff; position: relative; }
-        .badge { background: #007bff; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 12px; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); }
-        .price { font-size: 2.5rem; font-weight: bold; margin: 20px 0; }
-        .price span { font-size: 1rem; color: #666; }
-        .features { list-style: none; padding: 0; margin-bottom: 25px; color: #555; }
-        .features li { margin: 10px 0; }
-        .btn { display: block; background: #333; color: #fff; text-decoration: none; padding: 12px; border-radius: 6px; font-weight: bold; }
-        .pro-btn { background: #007bff; }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: #2980b9;
+            margin-top: 30px;
+            padding-left: 5px;
+        }
+
+        /* Ordered & Unordered List Styling */
+        ol, ul {
+            font-size: 1.1rem; /* Font-size property */
+            margin: 20px 0;    /* Margin property */
+            padding-left: 20px;
+            list-style-position: inside; /* List-style-position property */
+        }
+
+        li {
+            padding: 8px; /* Padding for list items */
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        li:hover {
+            background-color: #f0faff; /* Hover effect */
+            cursor: pointer;
+        }
+
+        /* Unordered List specific style */
+        ul {
+            list-style-type: circle;
+        }
+
+        /* Description List Styling */
+        dl {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #3498db;
+        }
+
+        dt {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-top: 10px;
+        }
+
+        dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            font-style: italic;
+            color: #666;
+        }
+
     </style>
 </head>
 <body>
-    <div class="pricing-wrapper">
-        <!-- Basic Plan -->
-        <div class="pricing-card">
-            <h3>Basic</h3>
-            <div class="price">$19<span>/mo</span></div>
-            <ul class="features">
-                <li>5 Projects</li>
-                <li>Basic Support</li>
-                <li>1GB Storage</li>
-            </ul>
-            <a href="#" class="btn">Get Started</a>
-        </div>
-        <!-- Pro Plan (Featured) -->
-        <div class="pricing-card pro-plan">
-            <div class="badge">Most Popular</div>
-            <h3>Pro</h3>
-            <div class="price">$49<span>/mo</span></div>
-            <ul class="features">
-                <li>Unlimited Projects</li>
-                <li>Priority Support</li>
-                <li>10GB Storage</li>
-            </ul>
-            <a href="#" class="pro-btn btn">Get Pro</a>
-        </div>
-        <!-- Premium Plan -->
-        <div class="pricing-card">
-            <h3>Premium</h3>
-            <div class="price">$99<span>/mo</span></div>
-            <ul class="features">
-                <li>Enterprise Access</li>
-                <li>Dedicated Manager</li>
-                <li>Unlimited Storage</li>
-            </ul>
-            <a href="#" class="btn">Contact Sales</a>
-        </div>
+
+    <div class="content-box">
+        <h1>Learning Roadmap</h1>
+
+        <!-- Ordered List: Sequence of learning -->
+        <h2>1. Step-by-Step Path</h2>
+        <ol>
+            <li>Master HTML5 Structural Tags</li>
+            <li>Learn CSS3 Layouts (Flexbox & Grid)</li>
+            <li>Understand JavaScript Fundamentals</li>
+            <li>Explore Frontend Frameworks (React or Vue)</li>
+        </ol>
+
+        <!-- Unordered List: Essential Tools -->
+        <h2>2. Essential Developer Tools</h2>
+        <ul>
+            <li>Visual Studio Code</li>
+            <li>Git & GitHub</li>
+            <li>Chrome Developer Tools</li>
+            <li>Terminal / Command Line</li>
+        </ul>
+
+        <!-- Description List: Key Terms -->
+        <h2>3. Key Terminology</h2>
+        <dl>
+            <dt>SEO</dt>
+            <dd>Search Engine Optimization - the process of improving site visibility.</dd>
+            
+            <dt>Responsive Design</dt>
+            <dd>An approach that makes web pages render well on a variety of devices.</dd>
+            
+            <dt>API</dt>
+            <dd>Application Programming Interface - a set of rules for communication between systems.</dd>
+        </dl>
     </div>
 
 </body>

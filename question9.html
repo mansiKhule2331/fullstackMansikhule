@@ -3,76 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Testimonial Section</title>
+    <title>Student Academic Profile | 2026</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f4f8; padding: 50px 20px; }
-
-        .testimonial-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            /* Flexbox Setup */
-            display: flex;
-            flex-wrap: wrap; /* Allows cards to drop to next line on mobile */
-            gap: 20px;
-            justify-content: center;
+        /* CSS Reset & Font Styling */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 40px 20px;
+            color: #374151;
         }
 
-        .testimonial-card {
-            background: #fff;
-            padding: 30px;
+        /* Box Model: Main Container Layout */
+        .profile-container {
+            max-width: 850px;
+            width: 100%; /* Width Property */
+            margin: 0 auto; /* Margin for Centering */
+            background-color: #ffffff;
+            padding: 35px; /* Internal Padding */
+            border: 1px solid #e5e7eb; /* Border Property */
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Heading & Paragraph Alignment */
+        header {
             text-align: center;
-            /* Mobile Default: 1 card per row */
-            flex: 1 1 100%; 
-            transition: transform 0.3s ease;
+            border-bottom: 3px solid #3b82f6;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
         }
 
-        /* Desktop Layout: 3 cards per row */
-        @media (min-width: 992px) {
-            .testimonial-card {
-                /* Calculate width: (100% / 3) minus gap spacing */
-                flex: 1 1 calc(33.333% - 20px); 
-            }
+        h1 {
+            color: #1e3a8a;
+            font-size: 2.2rem;
+            margin: 0;
         }
 
-        .testimonial-card:hover { transform: translateY(-5px); }
-        
-        .user-img { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px; border: 3px solid #007bff; }
-        .quote { font-style: italic; color: #555; margin-bottom: 15px; line-height: 1.6; }
-        .user-name { font-weight: bold; color: #333; display: block; }
-        .user-title { font-size: 0.9rem; color: #007bff; }
+        .summary-text {
+            line-height: 1.6;
+            text-align: justify;
+            background-color: #eff6ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        /* Table Styling & Borders */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Merges borders */
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 14px; /* Cell Padding */
+            text-align: left; /* Alignment */
+            border: 1px solid #d1d5db; /* Table Borders */
+        }
+
+        th {
+            background-color: #1e3a8a;
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Hover Effects on Table Rows */
+        tbody tr:hover {
+            background-color: #f9fafb;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .grade-pill {
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: #dcfce7;
+            color: #166534;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        /* Layout Footer */
+        .status-footer {
+            margin-top: 30px;
+            font-weight: 600;
+            color: #6b7280;
+            text-align: right;
+        }
     </style>
 </head>
 <body>
 
-    <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">What Our Users Say</h2>
+    <div class="profile-container">
+        <header>
+            <h1>Student Academic Portal</h1>
+            <p><strong>Name:</strong> Aryan Sharma | <strong>Enrollment:</strong> 2026CS104</p>
+        </header>
 
-    <div class="testimonial-container">
-        <!-- Card 1 -->
-        <div class="testimonial-card">
-            <img src="../login.webp" alt="User" class="user-img">
-            <p class="quote">"This platform has completely transformed how our team manages projects. The UI is incredibly intuitive."</p>
-            <span class="user-name">Sarah Jenkins</span>
-            <span class="user-title">Product Manager</span>
-        </div>
+        <h2>Academic Summary</h2>
+        <p class="summary-text">
+            Aryan is currently enrolled in the Bachelor of Technology (B.Tech) program specializing in Computer Science and Engineering. 
+            Throughout the academic year 2025-2026, he has maintained a consistent focus on data-driven subjects and software development. 
+            The following table highlights his performance in the core subjects for the current semester.
+        </p>
 
-        <!-- Card 2 -->
-        <div class="testimonial-card">
-            <img src="../headphone.jpg" alt="User" class="user-img">
-            <p class="quote">"The best customer support I've ever experienced. They solved my issue in under ten minutes!"</p>
-            <span class="user-name">David Chen</span>
-            <span class="user-title">Software Engineer</span>
-        </div>
+        <h2>Semester Grade Sheet</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject Code</th>
+                    <th>Subject Name</th>
+                    <th>Credits</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CS401</td>
+                    <td>Artificial Intelligence</td>
+                    <td>4</td>
+                    <td><span class="grade-pill">A+</span></td>
+                </tr>
+                <tr>
+                    <td>CS402</td>
+                    <td>Database Management</td>
+                    <td>3</td>
+                    <td><span class="grade-pill">A</span></td>
+                </tr>
+                <tr>
+                    <td>CS403</td>
+                    <td>Cloud Computing</td>
+                    <td>3</td>
+                    <td><span class="grade-pill">B+</span></td>
+                </tr>
+                <tr>
+                    <td>CS404</td>
+                    <td>Network Security</td>
+                    <td>4</td>
+                    <td><span class="grade-pill">A+</span></td>
+                </tr>
+            </tbody>
+        </table>
 
-        <!-- Card 3 -->
-        <div class="testimonial-card">
-            <img src="../google.png" alt="User" class="user-img">
-            <p class="quote">"Clean code, fast performance, and regular updates. Exactly what a modern business needs today."</p>
-            <span class="user-name">Elena Rodriguez</span>
-            <span class="user-title">Marketing Director</span>
-        </div>
+        <p class="status-footer">Current CGPA: 9.24 / 10.00</p>
     </div>
 
 </body>

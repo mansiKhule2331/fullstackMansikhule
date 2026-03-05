@@ -3,66 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gen-AI Product Page</title>
+    <title>Grand Heritage Hotel | Menu</title>
     <style>
-        body { font-family: sans-serif; margin: 20px; background: #f4f4f4; }
-
-        /* The Grid Container */
-        .product-container {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column for mobile */
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            background: #fff;
+        /* CSS Reset and Body Styling */
+        body {
+            font-family: 'Playfair Display', serif; /* Elegant font for hotels */
+            background-color: #fdfaf6; /* Soft cream background */
+            margin: 0;
             padding: 20px;
+            color: #2c3e50;
+        }
+
+        /* Box Model: Margin & Padding for the Main Container */
+        .menu-container {
+            max-width: 800px;
+            margin: 40px auto; /* Centers the container */
+            padding: 30px;
+            background-color: #ffffff;
+            border: 2px solid #d4af37; /* Elegant gold border */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             border-radius: 8px;
         }
 
-        /* Desktop Layout (Wide Screens) */
-        @media (min-width: 768px) {
-            .product-container {
-                grid-template-columns: 1fr 1fr; /* Side-by-side columns */
-                align-items: center;
-            }
+        /* Headings Styling */
+        h1 {
+            text-align: center;
+            color: #b38b00; /* Deep gold color */
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
         }
 
-        /* Gallery Styles */
-        .image-gallery img {
+        h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            color: #555;
+        }
+
+        /* List Styling: for Daily Specials or Features */
+        .specials-list {
+            list-style-type: square; /* Custom list style */
+            padding-left: 40px;
+            color: #b38b00;
+            font-weight: bold;
+        }
+
+        .specials-list li {
+            padding: 5px 0;
+        }
+
+        /* Table Styling for Menu Items */
+        table {
             width: 100%;
-            height: auto;
-            border-radius: 4px;
-            display: block;
+            border-collapse: collapse; /* Essential for clean table layout */
+            margin: 20px 0;
         }
 
-        /* Price Details Styles */
-        .price-details h1 { margin-top: 0; }
-        .price { font-size: 1.5rem; color: #e44d26; font-weight: bold; }
-        .buy-btn {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            cursor: pointer;
-            border-radius: 4px;
-            margin-top: 15px;
+        th {
+            text-align: left;
+            padding: 12px;
+            background-color: #f8f9fa;
+            border-bottom: 2px solid #ddd;
+        }
+
+        td {
+            padding: 15px 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Hover Effect for Table Rows */
+        tr:hover {
+            background-color: #fff9e6; /* Subtle gold highlight on hover */
+            transition: background 0.3s ease;
+        }
+
+        .price {
+            text-align: right;
+            font-weight: bold;
+            color: #27ae60; /* Professional green for prices */
+        }
+
+        /* Spacing and Alignment adjustments */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #888;
         }
     </style>
 </head>
 <body>
 
-    <div class="product-container">
-        <!-- Image Gallery -->
-        <div class="image-gallery">
-            <img src="../headphone.jpg" alt="Product Image">
-        </div>
+    <div class="menu-container">
+        <header>
+            <h1>Grand Heritage</h1>
+            <p style="text-align:center;">~ Fine Dining & Luxury Experience ~</p>
+        </header>
 
-        <!-- Price Details -->
-        <div class="price-details">
-            <h1>Premium Wireless Headphones</h1>
-            <p>Experience studio-quality sound with our latest noise-canceling technology.</p>
-            <p class="price">$199.99</p>
-            <button class="buy-btn">Add to Cart</button>
+        <h2>Today's Chef Specials</h2>
+        <ul class="specials-list">
+            <li>Truffle Infused Risotto</li>
+            <li>Glazed Atlantic Salmon</li>
+            <li>Handcrafted Tiramisu</li>
+        </ul>
+
+        <h2>Main Course</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dish Name</th>
+                    <th>Description</th>
+                    <th style="text-align:right;">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Grilled Ribeye Steak</td>
+                    <td>Served with garlic butter and roasted asparagus.</td>
+                    <td class="price">$32.00</td>
+                </tr>
+                <tr>
+                    <td>Mediterranean Pasta</td>
+                    <td>Feta, olives, and sundried tomatoes in olive oil.</td>
+                    <td class="price">$24.00</td>
+                </tr>
+                <tr>
+                    <td>Wild Mushroom Tart</td>
+                    <td>Savory crust with thyme and goat cheese.</td>
+                    <td class="price">$18.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Beverages</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="width: 80%;">Signature Sparkling Mocktail</td>
+                    <td class="price">$12.00</td>
+                </tr>
+                <tr>
+                    <td>Freshly Brewed Artisan Coffee</td>
+                    <td class="price">$6.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer">
+            <p>Prices are inclusive of all taxes. Please inform us of any allergies.</p>
         </div>
     </div>
 
