@@ -1,158 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Schedule | 2026</title>
-    <style>
-        /* Base Styling */
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f0f4f8;
-            margin: 0;
-            padding: 20px;
-            color: #2d3436;
-        }
-
-        /* Box Model: Main Wrapper */
-        .timetable-card {
-            max-width: 1000px;
-            width: 95%; /* Responsive width */
-            margin: 40px auto; /* Centers the card horizontally */
-            background-color: #ffffff;
-            padding: 30px; /* Internal spacing from table to border */
-            border: 1px solid #d1d9e6;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #0984e3;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        p.subtitle {
-            text-align: center;
-            color: #636e72;
-            margin-bottom: 30px;
-        }
-
-        /* Table Styling */
-        table {
-            width: 100%;
-            border-collapse: collapse; /* Removes gaps between borders */
-            border-spacing: 0;
-            overflow: hidden;
-            border-radius: 8px;
-            border: 1px solid #dfe6e9;
-        }
-
-        /* Table Headers */
-        th {
-            background-color: #0984e3;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-
-        /* Table Cells */
-        td {
-            padding: 15px;
-            text-align: center;
-            border: 1px solid #dfe6e9;
-            font-size: 0.95rem;
-        }
-
-        /* Box Model: Specific Cell Padding/Margin effect */
-        .day-column {
-            background-color: #f9f9f9;
-            font-weight: bold;
-            color: #2d3436;
-            width: 15%;
-        }
-
-        .break {
-            background-color: #fff3e0;
-            font-style: italic;
-            color: #e67e22;
-            font-weight: bold;
-        }
-
-        /* Hover Effects */
-        tbody tr:hover {
-            background-color: #f1f7ff; /* Subtle blue highlight */
-            transition: background-color 0.3s ease;
-            cursor: default;
-        }
-
-        /* Accent for specific subjects */
-        .lab-session {
-            border-left: 5px solid #00b894;
-        }
-    </style>
+    <title>Skyline Residency | Luxury Apartments</title>
 </head>
-<body>
-
-    <div class="timetable-card">
-        <h1>Department of Computer Science</h1>
-        <p class="subtitle">Weekly Academic Schedule - Semester IV (2026)</p>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Day / Time</th>
-                    <th>09:00 - 10:00</th>
-                    <th>10:00 - 11:00</th>
-                    <th>11:00 - 11:15</th>
-                    <th>11:15 - 12:15</th>
-                    <th>12:15 - 01:15</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="day-column">Monday</td>
-                    <td>Data Structures</td>
-                    <td>Mathematics IV</td>
-                    <td rowspan="5" class="break">B<br>R<br>E<br>A<br>K</td>
-                    <td>Operating Systems</td>
-                    <td class="lab-session">Python Lab</td>
-                </tr>
-                <tr>
-                    <td class="day-column">Tuesday</td>
-                    <td>Operating Systems</td>
-                    <td>Software Eng.</td>
-                    <td>Data Structures</td>
-                    <td class="lab-session">DBMS Lab</td>
-                </tr>
-                <tr>
-                    <td class="day-column">Wednesday</td>
-                    <td colspan="2" class="lab-session">Full Stack Development Workshop</td>
-                    <td>Mathematics IV</td>
-                    <td>Aptitude</td>
-                </tr>
-                <tr>
-                    <td class="day-column">Thursday</td>
-                    <td>Software Eng.</td>
-                    <td>DBMS</td>
-                    <td>Data Structures</td>
-                    <td>Library</td>
-                </tr>
-                <tr>
-                    <td class="day-column">Friday</td>
-                    <td>Mathematics IV</td>
-                    <td>Operating Systems</td>
-                    <td>DBMS</td>
-                    <td>Sports / Club</td>
-                </tr>
-            </tbody>
+<body bgcolor="#ffffff" text="#333333">
+    <!-- Header Section -->
+    <h1 align="center">Skyline Residency</h1>
+    <h3 align="center">Premium Living in the Heart of the City</h3>    
+    <p>Discover the perfect blend of comfort and elegance at Skyline Residency. Located in a prime residential hub, our apartments offer breathtaking city views, state-of-the-art architecture, and proximity to major business districts, schools, and hospitals. Experience a lifestyle designed for the modern family.</p>
+    <hr noshade size="4">
+    <!-- Property Amenities List -->
+    <h2>Property Amenities</h2>
+    <ul>
+        <li><b>Swimming Pool:</b> Temperature-controlled Olympic size pool.</li>
+        <li><b>Fitness Centre:</b> Fully equipped 24/7 gymnasium.</li>
+        <li><b>Security:</b> 3-tier security with CCTV and biometric access.</li>
+        <li><b>Parking:</b> Dedicated covered parking for residents and visitors.</li>
+        <li><b>Green Spaces:</b> Landscaped gardens and a dedicated children's play area.</li>
+    </ul>
+    <hr noshade size="2">
+    <!-- Apartment Pricing Table -->
+    <h2>Available Units & Pricing</h2>
+    <table border="1" cellpadding="12" cellspacing="0" width="100%">
+        <tr bgcolor="#eeeeee">
+            <th>Apartment Type</th>
+            <th>Area (Sq. Ft.)</th>
+            <th>Floor Range</th>
+            <th>Starting Price</th>
+        </tr>
+        <tr>
+            <td>2 BHK - Standard</td>
+            <td>1,250</td>
+            <td>1st - 10th</td>
+            <td>₹1.2 Crore</td>
+        </tr>
+        <tr>
+            <td>3 BHK - Premium</td>
+            <td>1,800</td>
+            <td>11th - 20th</td>
+            <td>₹1.9 Crore</td>
+        </tr>
+        <tr>
+            <td>4 BHK - Penthouse</td>
+            <td>3,500</td>
+            <td>Top Floor</td>
+            <td>₹4.5 Crore</td>
+        </tr>
+    </table>
+    <hr noshade size="2">
+    <!-- Inquiry Form -->
+    <h2>Interested in a Site Visit?</h2>
+    <p>Fill out the form below, and our property consultant will get in touch with you within 24 hours.</p>
+    
+    <form action="#" method="post">
+        <table border="0" cellpadding="5">
+            <tr>
+                <td>Your Full Name:</td>
+                <td><input type="text" name="name" size="30" required></td>
+            </tr>
+            <tr>
+                <td>Mobile Number:</td>
+                <td><input type="tel" name="phone" size="30" required></td>
+            </tr>
+            <tr>
+                <td>Preferred Unit:</td>
+                <td>
+                    <select name="unit">
+                        <option value="2bhk">2 BHK</option>
+                        <option value="3bhk">3 BHK</option>
+                        <option value="4bhk">Penthouse</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Budget Range:</td>
+                <td>
+                    <input type="radio" name="budget" value="1-2"> 1-2 Cr
+                    <input type="radio" name="budget" value="2-4"> 2-4 Cr
+                    <input type="radio" name="budget" value="4plus"> 4 Cr+
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">Questions/Comments:</td>
+                <td><textarea name="message" rows="4" cols="32"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Submit Inquiry">
+                    <input type="reset" value="Clear">
+                </td>
+            </tr>
         </table>
-    </div>
-
+    </form>
+    <br><br>
+    <p align="center"><small>&copy; 2026 Skyline Residency Real Estate Group</small></p>
 </body>
 </html>
