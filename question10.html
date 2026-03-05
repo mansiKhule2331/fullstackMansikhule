@@ -1,42 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Weather Checker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Tech Summit 2026 | Footer</title>
+    <style>
+        /* Base Reset & Styling */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 60px 5% 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap; /* Essential for mobile collapsing */
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        /* Footer Column Logic */
+        .footer-col {
+            flex: 1 1 250px; /* Grow/Shrink with a base of 250px */
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #00d4ff; /* 2026 Event Theme Color */
+        }
+
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col a { color: #ccc; text-decoration: none; transition: 0.3s; }
+        .footer-col a:hover { color: #fff; }
+
+        /* Newsletter Signup */
+        .newsletter input {
+            padding: 10px;
+            width: 70%;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .newsletter button {
+            padding: 10px 15px;
+            border: none;
+            background: #00d4ff;
+            color: #000;
+            font-weight: bold;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        /* Responsive Breakpoint (< 768px) */
+        @media screen and (max-width: 768px) {
+            .footer-container {
+                flex-direction: column; /* Stack vertically */
+                align-items: center;
+                text-align: center;
+            }
+
+            .newsletter input { width: 100%; border-radius: 4px; margin-bottom: 10px; }
+            .newsletter button { width: 100%; border-radius: 4px; }
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <h2>Weather & Temperature Checker</h2>
-    <input type="text" id="weather" placeholder="Enter weather (Sunny/Rainy)">
-    <input type="number" id="temperature" placeholder="Enter temperature">
-    <button onclick="checkWeather()">Check</button>
-    <p id="result"></p>
-    <script>
-        function checkWeather() {
-            var weather = document.getElementById("weather").value;
-            var temp = document.getElementById("temperature").value;
-            if (weather === "") {
-                document.getElementById("result").innerHTML = "Please enter weather";
-                return;
-            }
-            weather = weather.toLowerCase(); // make case-insensitive
-            if (weather === "sunny") {
-                if (temp === "") {
-                    document.getElementById("result").innerHTML = "Please enter temperature";
-                    return;
-                }
-                temp = parseFloat(temp);
-                if (temp > 30) {
-                    document.getElementById("result").innerHTML = "Wear sunscreen";
-                } else {
-                    document.getElementById("result").innerHTML = "Enjoy the day";
-                }
-            } 
-            else if (weather === "rainy") {
-                document.getElementById("result").innerHTML = "Take an umbrella";
-            } 
-            else {
-                document.getElementById("result").innerHTML = "Invalid weather type";
-            }
-        }
-    </script>
+
+    <!-- Main Content Placeholder -->
+    <div style="height: 50vh;"></div>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Column 1: Event Info -->
+            <div class="footer-col">
+                <h4>TechSummit 2026</h4>
+                <p>The world's largest gathering of AI and Robotics experts. Joining 50+ countries in Tokyo.</p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Agenda</a></li>
+                    <li><a href="#">Speakers</a></li>
+                    <li><a href="#">Sponsorship</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Newsletter -->
+            <div class="footer-col newsletter">
+                <h4>Stay Updated</h4>
+                <form>
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 Global Tech Summit. All rights reserved.
+        </div>
+    </footer>
+
 </body>
 </html>

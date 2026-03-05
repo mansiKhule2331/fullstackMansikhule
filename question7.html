@@ -1,50 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Simple Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Wall</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #121212; /* Dark theme */
+            font-family: sans-serif;
+        }
+        .photo-wall {
+            display: grid;
+            /* Magic Line: Automatically creates as many 250px+ columns as possible */
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 10px;
+        }
+        .photo-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            aspect-ratio: 1 / 1; /* Keeps images perfectly square */
+            cursor: pointer;
+        }
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease, filter 0.3s ease;
+            filter: grayscale(40%);
+        }
+        /* Interaction Effects */
+        .photo-card:hover img {
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
+        .photo-card::after {
+            content: "View Photo";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .photo-card:hover::after {
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-    <h2>Simple Calculator (Using Switch)</h2>
-    <input type="number" id="num1" placeholder="Enter first number">
-    <input type="number" id="num2" placeholder="Enter second number">
-    <input type="text" id="operator" placeholder="Enter operator (+, -, *, /)">    
-    <button onclick="calculate()">Calculate</button>
-    <p id="result"></p>
-    <script>
-        function calculate() {
-            var n1 = document.getElementById("num1").value;
-            var n2 = document.getElementById("num2").value;
-            var op = document.getElementById("operator").value;
-            if (n1 === "" || n2 === "" || op === "") {
-                document.getElementById("result").innerHTML = "Please enter all fields";
-                return;
-            }
-            n1 = parseFloat(n1);
-            n2 = parseFloat(n2);
-            var result;
-            switch (op) {
-                case "+":
-                    result = n1 + n2;
-                    break;
-                case "-":
-                    result = n1 - n2;
-                    break;
-                case "*":
-                    result = n1 * n2;
-                    break;
-                case "/":
-                    if (n2 === 0) {
-                        document.getElementById("result").innerHTML = "Cannot divide by zero";
-                        return;
-                    }
-                    result = n1 / n2;
-                    break;
-                default:
-                    document.getElementById("result").innerHTML = "Invalid operator";
-                    return;
-            }
-            document.getElementById("result").innerHTML = "Result: " + result;
-        }
-    </script>
+    <div class="photo-wall">
+        <!-- 12 Image Cards -->
+        <div class="photo-card"><img src="../image4.webp" alt="Gallery Image"></div>
+        <div class="photo-card"><img src="../genai.jpg" alt="Gallery Image"></div>
+        <div class="photo-card"><img src="../headphone.jpg" alt="Gallery Image"></div>
+        <div class="photo-card"><img src="../image1.jpg" alt="Gallery Image"></div>
+        </div>
 </body>
 </html>

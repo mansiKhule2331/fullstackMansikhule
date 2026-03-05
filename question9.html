@@ -1,37 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Ticket Price Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Testimonial Section</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f4f8; padding: 50px 20px; }
+
+        .testimonial-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            /* Flexbox Setup */
+            display: flex;
+            flex-wrap: wrap; /* Allows cards to drop to next line on mobile */
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            /* Mobile Default: 1 card per row */
+            flex: 1 1 100%; 
+            transition: transform 0.3s ease;
+        }
+
+        /* Desktop Layout: 3 cards per row */
+        @media (min-width: 992px) {
+            .testimonial-card {
+                /* Calculate width: (100% / 3) minus gap spacing */
+                flex: 1 1 calc(33.333% - 20px); 
+            }
+        }
+
+        .testimonial-card:hover { transform: translateY(-5px); }
+        
+        .user-img { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px; border: 3px solid #007bff; }
+        .quote { font-style: italic; color: #555; margin-bottom: 15px; line-height: 1.6; }
+        .user-name { font-weight: bold; color: #333; display: block; }
+        .user-title { font-size: 0.9rem; color: #007bff; }
+    </style>
 </head>
 <body>
-    <h2>Ticket Price Calculator</h2>
-    <input type="number" id="age" placeholder="Enter your age">
-    <button onclick="calculatePrice()">Check Price</button>
-    <p id="result"></p>
-    <script>
-        function calculatePrice() {
-            var age = document.getElementById("age").value;
-            if (age === "") {
-                document.getElementById("result").innerHTML = "Please enter your age";
-                return;
-            }
-            age = parseInt(age);
-            var price;
-            if (age < 12) {
-                price = 5;
-            }
-            else if (age >= 12 && age <= 17) {
-                price = 10;
-            }
-            else if (age >= 18 && age <= 59) {
-                price = 20;
-            }
-            else {  // 60 and above
-                price = 15;
-            }
-            document.getElementById("result").innerHTML = 
-                "Ticket Price: $" + price;
-        }
-    </script>
+
+    <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">What Our Users Say</h2>
+
+    <div class="testimonial-container">
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+            <img src="../login.webp" alt="User" class="user-img">
+            <p class="quote">"This platform has completely transformed how our team manages projects. The UI is incredibly intuitive."</p>
+            <span class="user-name">Sarah Jenkins</span>
+            <span class="user-title">Product Manager</span>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+            <img src="../headphone.jpg" alt="User" class="user-img">
+            <p class="quote">"The best customer support I've ever experienced. They solved my issue in under ten minutes!"</p>
+            <span class="user-name">David Chen</span>
+            <span class="user-title">Software Engineer</span>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+            <img src="../google.png" alt="User" class="user-img">
+            <p class="quote">"Clean code, fast performance, and regular updates. Exactly what a modern business needs today."</p>
+            <span class="user-name">Elena Rodriguez</span>
+            <span class="user-title">Marketing Director</span>
+        </div>
+    </div>
+
 </body>
 </html>

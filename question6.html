@@ -1,29 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Leap Year Checker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Bistro Menu</title>
+    <style>
+        :root {
+            /* Dynamic sizing using clamp(min, preferred, max) */
+            --title-font: clamp(1.5rem, 5vw, 3rem);
+            --item-font: clamp(1.1rem, 2.5vw, 1.6rem);
+            --desc-font: clamp(0.9rem, 1.5vw, 1.1rem);
+            --img-size: clamp(80px, 15vw, 150px);
+        }
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #faf7f2;
+            color: #2c2c2c;
+            line-height: 1.6;
+            padding: clamp(20px, 5%, 60px);
+        }
+        .menu-container {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 2px solid #d4af37;
+            padding: 30px;
+            background: white;
+        }
+        h1 {
+            text-align: center;
+            font-size: var(--title-font);
+            color: #8b0000;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        /* Description List Styling */
+        .menu-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+        .menu-img {
+            width: var(--img-size);
+            height: var(--img-size);
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #eee;
+            flex-shrink: 0;
+        }
+        dl { flex-grow: 1; margin: 0; }
+        dt {
+            font-size: var(--item-font);
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dotted #ccc;
+        }
+        dd {
+            font-size: var(--desc-font);
+            color: #666;
+            margin: 5px 0 0 0;
+            font-style: italic;
+        }
+        .price { color: #8b0000; }
+    </style>
 </head>
 <body>
-    <h2>Check Leap Year</h2>
-    <input type="number" id="year" placeholder="Enter a year">
-    <button onclick="checkLeapYear()">Check</button>
-    <p id="result"></p>
-    <script>
-        function checkLeapYear() {
-            var year = document.getElementById("year").value;
-            if (year === "") {
-                document.getElementById("result").innerHTML = "Please enter a year";
-                return;
-            }
-            year = parseInt(year);
-            // Leap year condition
-            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
-                document.getElementById("result").innerHTML = year + " is a Leap Year";
-            } 
-            else {
-                document.getElementById("result").innerHTML = year + " is NOT a Leap Year";
-            }
-        }
-    </script>
+    <div class="menu-container">
+        <h1>Summer Bistro Menu</h1>
+        <!-- Menu Item 1 -->
+        <div class="menu-item">
+            <img src="../image1.jpg" alt="Truffle Pasta" class="menu-img">
+            <dl>
+                <dt>
+                    <span>Wild Mushroom Truffle Pasta</span>
+                    <span class="price">$24</span>
+                </dt>
+                <dd>Hand-rolled tagliatelle, seasonal wild mushrooms, shaved black truffle, and aged parmesan cream.</dd>
+            </dl>
+        </div>
+        <!-- Menu Item 2 -->
+        <div class="menu-item">
+            <img src="../image2.webp" alt="Seared Salmon" class="menu-img">
+            <dl>
+                <dt>
+                    <span>Atlantic Pan-Seared Salmon</span>
+                    <span class="price">$32</span>
+                </dt>
+                <dd>Crispy skin salmon served over a bed of lemon-infused quinoa and roasted asparagus.</dd>
+            </dl>
+        </div>
+    </div>
+
 </body>
 </html>

@@ -1,31 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Even or Odd Checker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen-AI Product Page</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background: #f4f4f4; }
+
+        /* The Grid Container */
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for mobile */
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Desktop Layout (Wide Screens) */
+        @media (min-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr 1fr; /* Side-by-side columns */
+                align-items: center;
+            }
+        }
+
+        /* Gallery Styles */
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        /* Price Details Styles */
+        .price-details h1 { margin-top: 0; }
+        .price { font-size: 1.5rem; color: #e44d26; font-weight: bold; }
+        .buy-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Check Even or Odd</h2>
-    <input type="number" id="number" placeholder="Enter an integer">
-    <button onclick="checkEvenOdd()">Check</button>
-    <p id="result"></p>
-    <script>
-        // Function that returns true if even, false if odd
-        function isEven(num) {
-            return num % 2 === 0;
-        }
-        function checkEvenOdd() {
-            var value = document.getElementById("number").value;
-            if (value === "") {
-                document.getElementById("result").innerHTML = "Please enter a number";
-                return;
-            }
-            var number = parseInt(value);
-            var result = isEven(number);
-            document.getElementById("result").innerHTML = 
-                "Result: " + result + 
-                "<br>" + 
-                (result ? "The number is Even" : "The number is Odd");
-        }
-    </script>
+
+    <div class="product-container">
+        <!-- Image Gallery -->
+        <div class="image-gallery">
+            <img src="../headphone.jpg" alt="Product Image">
+        </div>
+
+        <!-- Price Details -->
+        <div class="price-details">
+            <h1>Premium Wireless Headphones</h1>
+            <p>Experience studio-quality sound with our latest noise-canceling technology.</p>
+            <p class="price">$199.99</p>
+            <button class="buy-btn">Add to Cart</button>
+        </div>
+    </div>
+
 </body>
 </html>

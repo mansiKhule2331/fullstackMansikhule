@@ -1,27 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Voting Eligibility Checker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio Header</title>
+    <style>
+        /* Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #fafafa; }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 800; color: #333; text-decoration: none; }
+
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: #666; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: #007bff; }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; color: #222; }
+        .hero p { font-size: 1.2rem; color: #555; max-width: 600px; }
+
+        /* Responsive Breakpoint: < 600px */
+        @media screen and (max-width: 600px) {
+            nav { justify-content: center; } /* Centers the logo container */
+            
+            .nav-links { display: none; } /* Hides secondary links */
+            
+            .logo { text-align: center; }
+
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
 </head>
 <body>
-    <h2>Check Voting Eligibility</h2>
-    <input type="number" id="age" placeholder="Enter your age">
-    <button onclick="checkEligibility()">Check</button>
-    <p id="result"></p>
-    <script>
-        function checkEligibility() {
-            var age = document.getElementById("age").value;
-            if (age === "") {
-                document.getElementById("result").innerHTML = "Please enter your age";
-                return;
-            }
-            age = parseInt(age);
-            if (age >= 18) {
-                document.getElementById("result").innerHTML = "Eligible to Vote";
-            } else {
-                document.getElementById("result").innerHTML = "Not Eligible to Vote";
-            }
-        }
-    </script>
+
+    <nav>
+        <a href="#" class="logo">CREATIVE.CO</a>
+        <ul class="nav-links">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Hi, I'm a Designer.</h1>
+        <p>I build modern, high-performance digital experiences that help brands grow and connect with their audience.</p>
+    </header>
+
 </body>
 </html>

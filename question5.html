@@ -1,34 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Grade Calculator</title>
-</head>
-<body>
-    <h2>Grade Calculator</h2>
-    <input type="number" id="score" placeholder="Enter your score">
-    <button onclick="calculateGrade()">Check Grade</button>
-    <p id="result"></p>
-    <script>
-        function calculateGrade() {
-            var score = document.getElementById("score").value;
-            if (score === "") {
-                document.getElementById("result").innerHTML = "Please enter your score";
-                return;
-            }
-            score = parseInt(score);
-            if (score >= 90) {
-                document.getElementById("result").innerHTML = "Grade: A";
-            }
-            else if (score >= 80) {
-                document.getElementById("result").innerHTML = "Grade: B";
-            }
-            else if (score >= 70) {
-                document.getElementById("result").innerHTML = "Grade: C";
-            }
-            else {
-                document.getElementById("result").innerHTML = "Grade: F";
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern News Portal</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; padding: 20px; }
+
+        /* Mobile First: Single Column Stack */
+        .news-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* Tablet Layout: Featured top, Sidebar below (3 columns) */
+        @media (min-width: 600px) {
+            .sidebar {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
             }
         }
-    </script>
+        /* Desktop Layout: Sidebar moves to the right */
+        @media (min-width: 1024px) {
+            .news-grid {
+                grid-template-columns: 3fr 1fr; /* Main story takes 75% */
+            }
+            .sidebar {
+                grid-template-columns: 1fr; /* Sidebar stacks vertically on desktop */
+            }
+        }
+        /* Section Styling */
+        .featured-story {
+            background: #fff;
+            padding: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .featured-img { width: 100%; height: 350px; background: #ddd; object-fit: cover; }
+        .content-pad { padding: 20px; }
+        .sidebar-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h2 { margin-bottom: 10px; color: #1a1a1a; }
+        p { color: #666; line-height: 1.5; }
+    </style>
+</head>
+<body>
+    <div class="news-grid">
+        <!-- Main Featured Story -->
+        <article class="featured-story">
+            <div class="featured-img" style="background: url('https://placehold.co/400') center/cover;"></div>
+            <div class="content-pad">
+                <h2>Breaking: The Future of Generative AI in 2026</h2>
+                <p>Industry experts predict that "Agentic AI" will redefine how we interact with technology by mid-year...</p>
+            </div>
+        </article>
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <div class="sidebar-item">
+                <h4>Tech Trends</h4>
+                <p>New quantum processors hitting the market.</p>
+            </div>
+            <div class="sidebar-item">
+                <h4>Global News</h4>
+                <p>Renewable energy peaks in European markets.</p>
+            </div>
+            <div class="sidebar-item">
+                <h4>Finance</h4>
+                <p>Stock market surges amid tech breakthroughs.</p>
+            </div>
+        </aside>
+    </div>
+
 </body>
 </html>
