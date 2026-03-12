@@ -1,118 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>The Royal Feast | Reservation</title>
-</head>
-<body bgcolor="#fffaf0" text="#2c3e50">
+<body>
 
-    <!-- Header Section -->
-    <h1 align="center">THE ROYAL FEAST</h1>
-    <p align="center"><i>"A Gastronomic Journey Through Authenticity and Taste"</i></p>
-    
-    <p>Welcome to The Royal Feast. We pride ourselves on using farm-fresh ingredients to create dishes that tell a story. Whether it is a quiet dinner for two or a grand family celebration, our sophisticated ambiance and world-class service ensure an unforgettable dining experience. Book your table today and taste the tradition.</p>
+    <h2>Square Calculator</h2>
+    <p id="square-result"></p>
 
-    <hr noshade size="4" color="#8b4513">
+    <script>
+        // Function to calculate the square
+        function findSquare(num) {
+            return num * num;
+        }
 
-    <!-- List of Cuisines -->
-    <h2>Our Specialized Cuisines</h2>
-    <ul>
-        <li><b>North Indian:</b> Authentic tandoors, rich curries, and hand-rolled naans.</li>
-        <li><b>Continental:</b> Grilled meats, herb-infused pastas, and gourmet salads.</li>
-        <li><b>Pan-Asian:</b> Fresh sushi rolls, dim sums, and spicy stir-fries.</li>
-        <li><b>Italian:</b> Wood-fired pizzas and classic risotto.</li>
-    </ul>
-
-    <hr noshade size="1">
-
-    <!-- Menu Pricing Table -->
-    <h2>Signature Dish Pricing</h2>
-    <table border="1" cellpadding="10" cellspacing="0" width="100%" bgcolor="#ffffff">
-        <tr bgcolor="#f5deb3">
-            <th>Dish Name</th>
-            <th>Cuisine Type</th>
-            <th>Serving Size</th>
-            <th>Price (INR)</th>
-        </tr>
-        <tr>
-            <td>Butter Chicken Delux</td>
-            <td>North Indian</td>
-            <td>2 Persons</td>
-            <td>₹650</td>
-        </tr>
-        <tr>
-            <td>Classic Lasagna</td>
-            <td>Italian</td>
-            <td>1 Person</td>
-            <td>₹480</td>
-        </tr>
-        <tr>
-            <td>Dragon Chilli Paneer</td>
-            <td>Pan-Asian</td>
-            <td>2 Persons</td>
-            <td>₹350</td>
-        </tr>
-        <tr>
-            <td>Grilled Atlantic Salmon</td>
-            <td>Continental</td>
-            <td>1 Person</td>
-            <td>₹1,200</td>
-        </tr>
-    </table>
-
-    <hr noshade size="1">
-
-    <!-- Reservation Form -->
-    <h2>Table Reservation Form</h2>
-    <p>Fill out the details below to request a table. Our manager will contact you for confirmation.</p>
-    
-    <form action="#" method="post">
-        <table border="0" cellpadding="8">
-            <tr>
-                <td>Your Name:</td>
-                <td><input type="text" name="guest_name" size="35" required></td>
-            </tr>
-            <tr>
-                <td>Occasion Type:</td>
-                <td>
-                    <select name="occasion">
-                        <option value="dinner">Casual Dinner</option>
-                        <option value="birthday">Birthday Celebration</option>
-                        <option value="anniversary">Anniversary</option>
-                        <option value="corporate">Business Meeting</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Number of Guests:</td>
-                <td><input type="number" name="guests" min="1" max="20" required></td>
-            </tr>
-            <tr>
-                <td>Date of Visit:</td>
-                <td><input type="date" name="visit_date" required></td>
-            </tr>
-            <tr>
-                <td>Seating Preference:</td>
-                <td>
-                    <input type="radio" name="seat" value="indoor"> Indoor
-                    <input type="radio" name="seat" value="rooftop"> Rooftop
-                </td>
-            </tr>
-            <tr>
-                <td valign="top">Special Instructions:</td>
-                <td><textarea name="requests" rows="4" cols="33" placeholder="Allergies, high chair for kids, etc."></textarea></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="submit" value="Check Table Availability">
-                    <input type="reset" value="Reset Form">
-                </td>
-            </tr>
-        </table>
-    </form>
-
-    <br><br>
-    <p align="center"><small>&copy; 2026 The Royal Feast | Open 12:00 PM to 11:30 PM Daily</small></p>
+        // Example: Finding the square of 8
+        let number = 8;
+        let result = findSquare(number);
+        
+        // Displaying the result on the page
+        document.getElementById("square-result").innerHTML = 
+            "The square of " + number + " is: " + result;
+    </script>
 
 </body>
 </html>
