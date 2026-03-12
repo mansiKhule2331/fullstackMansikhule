@@ -1,112 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Iron Core Fitness | Membership</title>
-</head>
-<body bgcolor="#222222" text="#ffffff">
+<body>
 
-    <!-- Header Section -->
-    <h1 align="center">IRON CORE FITNESS CLUB</h1>
-    <p align="center"><i>"Stronger Every Day. Join the Elite."</i></p>
-    
-    <p>Welcome to Iron Core Fitness, the premier destination for high-performance training. We provide state-of-the-art equipment, certified personal trainers, and a motivating community to help you reach your health goals. Whether you are a beginner or a professional athlete, our club offers the environment you need to push your limits.</p>
+    <h2>Sum Calculator</h2>
+    <p id="result">Result will appear here.</p>
 
-    <hr noshade size="4" color="#ff4500">
+    <script>
+        // The requested function
+        function add(a, b) {
+            return a + b;
+        }
 
-    <!-- List of Workout Classes -->
-    <h2>Available Workout Classes</h2>
-    <ul>
-        <li><b>HIIT Power:</b> High-intensity intervals to burn maximum calories.</li>
-        <li><b>Strength & Conditioning:</b> Focus on heavy lifting and muscle growth.</li>
-        <li><b>Yoga Flow:</b> Improve flexibility, balance, and mental focus.</li>
-        <li><b>Zumba Dance:</b> High-energy cardio through fun dance routines.</li>
-        <li><b>Kickboxing:</b> Full-body workout combining combat and cardio.</li>
-    </ul>
-
-    <hr noshade size="1" color="#ff4500">
-
-    <!-- Membership Plans Table -->
-    <h2>Membership Plans</h2>
-    <table border="1" cellpadding="12" cellspacing="0" width="100%" bgcolor="#333333">
-        <tr bgcolor="#ff4500">
-            <th>Plan Name</th>
-            <th>Access Type</th>
-            <th>Trainer Support</th>
-            <th>Monthly Price</th>
-        </tr>
-        <tr>
-            <td>Basic Plan</td>
-            <td>General Gym Access</td>
-            <td>None</td>
-            <td>₹1,500</td>
-        </tr>
-        <tr>
-            <td>Pro Plan</td>
-            <td>Gym + All Classes</td>
-            <td>Floor Trainer</td>
-            <td>₹3,000</td>
-        </tr>
-        <tr>
-            <td>Elite Plan</td>
-            <td>24/7 Access + Sauna</td>
-            <td>Personal Coach</td>
-            <td>₹5,500</td>
-        </tr>
-    </table>
-
-    <hr noshade size="1" color="#ff4500">
-
-    <!-- Enrollment Form -->
-    <h2>Join the Club</h2>
-    <p>Fill out the form below to start your transformation. A consultant will call you for a free trial session.</p>
-    
-    <form action="#" method="post">
-        <table border="0" cellpadding="8">
-            <tr>
-                <td>Full Name:</td>
-                <td><input type="text" name="member_name" size="35" required></td>
-            </tr>
-            <tr>
-                <td>Select Your Plan:</td>
-                <td>
-                    <select name="plan_type">
-                        <option value="basic">Basic Plan</option>
-                        <option value="pro">Pro Plan</option>
-                        <option value="elite">Elite Plan</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Primary Fitness Goal:</td>
-                <td>
-                    <input type="radio" name="goal" value="loss"> Weight Loss
-                    <input type="radio" name="goal" value="gain"> Muscle Gain
-                </td>
-            </tr>
-            <tr>
-                <td>Preferred Class Interest:</td>
-                <td>
-                    <input type="checkbox" name="class" value="hiit"> HIIT
-                    <input type="checkbox" name="class" value="yoga"> Yoga
-                    <input type="checkbox" name="class" value="boxing"> Boxing
-                </td>
-            </tr>
-            <tr>
-                <td valign="top">Medical History / Notes:</td>
-                <td><textarea name="medical" rows="4" cols="33" placeholder="Injuries, conditions, or specific goals..."></textarea></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="submit" value="Submit Enrollment">
-                    <input type="reset" value="Clear">
-                </td>
-            </tr>
-        </table>
-    </form>
-
-    <br><br>
-    <p align="center"><small>&copy; 2026 Iron Core Fitness | Open 5:00 AM - 11:00 PM Daily</small></p>
+        // Example: Calling the function and showing it on the page
+        let sum = add(10, 25);
+        document.getElementById("result").innerHTML = "The sum is: " + sum;
+    </script>
 
 </body>
 </html>
