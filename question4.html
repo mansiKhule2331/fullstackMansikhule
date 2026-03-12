@@ -1,122 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Wanderlust Travel Agency</title>
-</head>
-<body bgcolor="#e6f2ff" text="#002244">
+<body>
 
-    <!-- Header Section -->
-    <h1 align="center">WANDERLUST TRAVEL AGENCY</h1>
-    <p align="center"><i>"Explore the Unexplored with Our Expert Guides"</i></p>
-    
-    <p>Welcome to Wanderlust Travel Agency, your one-stop destination for curated holiday experiences. Whether you are seeking a serene beach retreat, a thrilling mountain trek, or a cultural city tour, we handle everything from flights to local transport. Our mission is to provide hassle-free, memorable journeys tailored to your budget and interests.</p>
+    <h2>Even or Odd Checker</h2>
+    <p id="check-result"></p>
 
-    <hr noshade size="4" color="#ffcc00">
+    <script>
+        // The requested function
+        function isEven(n) {
+            // Returns true if remainder is 0 when divided by 2
+            return n % 2 === 0;
+        }
 
-    <!-- List of Tour Packages -->
-    <h2>Our Popular Tour Packages</h2>
-    <ul>
-        <li><b>The Himalayan Escape:</b> 6 Days/5 Nights across Manali and Shimla.</li>
-        <li><b>Royal Rajasthan:</b> 7 Days exploring the forts of Jaipur, Jodhpur, and Udaipur.</li>
-        <li><b>Backwaters of Kerala:</b> 5 Days of relaxation in Alleppey and Munnar.</li>
-        <li><b>Andaman Island Vibes:</b> 6 Days of water sports and white sand beaches.</li>
-        <li><b>Divine Kashi:</b> 3 Days spiritual tour of Varanasi and Sarnath.</li>
-    </ul>
-
-    <hr noshade size="1">
-
-    <!-- Travel Itinerary Table -->
-    <h2>Sample Itinerary: The Himalayan Escape</h2>
-    <table border="1" cellpadding="10" cellspacing="0" width="100%" bgcolor="#ffffff">
-        <tr bgcolor="#ffcc00">
-            <th>Day</th>
-            <th>Location</th>
-            <th>Major Activities</th>
-            <th>Stay Type</th>
-        </tr>
-        <tr>
-            <td align="center">1</td>
-            <td>Manali Arrival</td>
-            <td>Mall Road Shopping & Local Sightseeing</td>
-            <td>4-Star Hotel</td>
-        </tr>
-        <tr>
-            <td align="center">2</td>
-            <td>Solang Valley</td>
-            <td>Paragliding, Skiing, and Adventure Sports</td>
-            <td>4-Star Hotel</td>
-        </tr>
-        <tr>
-            <td align="center">3</td>
-            <td>Rohtang Pass</td>
-            <td>Snow Point Exploration & Photography</td>
-            <td>4-Star Hotel</td>
-        </tr>
-        <tr>
-            <td align="center">4</td>
-            <td>Shimla Transfer</td>
-            <td>Scenic Drive through the Mountains</td>
-            <td>Resort</td>
-        </tr>
-    </table>
-
-    <hr noshade size="1">
-
-    <!-- Travel Inquiry Form -->
-    <h2>Plan Your Dream Trip</h2>
-    <p>Fill out your preferences below, and our travel consultant will send you a customized quote.</p>
-    
-    <form action="#" method="post">
-        <table border="0" cellpadding="8">
-            <tr>
-                <td>Your Name:</td>
-                <td><input type="text" name="traveler_name" size="35" required></td>
-            </tr>
-            <tr>
-                <td>Preferred Destination:</td>
-                <td>
-                    <select name="destination">
-                        <option value="himalayas">The Himalayas</option>
-                        <option value="rajasthan">Rajasthan</option>
-                        <option value="kerala">Kerala</option>
-                        <option value="andaman">Andaman Islands</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Travel Date:</td>
-                <td><input type="date" name="travel_date" required></td>
-            </tr>
-            <tr>
-                <td>Package Type:</td>
-                <td>
-                    <input type="radio" name="pkg" value="budget"> Budget
-                    <input type="radio" name="pkg" value="luxury"> Luxury
-                </td>
-            </tr>
-            <tr>
-                <td>Transport Needed:</td>
-                <td>
-                    <input type="checkbox" name="transport" value="flight"> Flight
-                    <input type="checkbox" name="transport" value="cab"> Local Cab
-                </td>
-            </tr>
-            <tr>
-                <td valign="top">Special Requests:</td>
-                <td><textarea name="notes" rows="5" cols="33" placeholder="Food preferences, elderly travelers, etc."></textarea></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="submit" value="Request Free Quote">
-                    <input type="reset" value="Clear">
-                </td>
-            </tr>
-        </table>
-    </form>
-
-    <br><br>
-    <p align="center"><small>&copy; 2026 Wanderlust Travel Agency | Registered with Ministry of Tourism</small></p>
+        // Example: Checking the number 10
+        let num = 10;
+        let result = isEven(num);
+        
+        // Displaying "True" or "False" on the page
+        document.getElementById("check-result").innerHTML = 
+            "Is " + num + " even? " + (result ? "True" : "False");
+    </script>
 
 </body>
 </html>
