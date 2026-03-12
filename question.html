@@ -1,139 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typography & Box Model Demo</title>
-    <style>
-        /* Global Reset & Body Styling */
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background-color: #f8fafc;
-            margin: 0;
-            padding: 50px 20px;
-            color: #1e293b;
-            line-height: 1.6;
-        }
-
-        /* Box Model: Main Container */
-        .container {
-            max-width: 850px;
-            width: 100%; /* Width property */
-            margin: 0 auto; /* Margin property for centering */
-            background-color: #ffffff;
-            padding: 40px; /* Padding property */
-            border: 1px solid #e2e8f0; /* Border property */
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Typography Sections with Box Model */
-        .section {
-            margin-bottom: 30px;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid transparent;
-            transition: all 0.3s ease; /* Hover transition */
-        }
-
-        .section:hover {
-            background-color: #f1f5f9;
-            border-left: 4px solid #3b82f6; /* Highlight border on hover */
-            transform: translateX(10px); /* Subtle shift effect */
-        }
-
-        /* Specific Heading Styles */
-        h1 {
-            color: #1e3a8a;
-            font-size: 3rem;
-            text-align: center;
-            margin-top: 0;
-            text-transform: capitalize;
-        }
-
-        h2 {
-            color: #1e40af;
-            font-size: 2.25rem;
-            text-align: left;
-            border-bottom: 2px solid #dbeafe;
-        }
-
-        h3 {
-            color: #1d4ed8;
-            font-size: 1.85rem;
-            text-align: left;
-            letter-spacing: 1px;
-        }
-
-        h4 {
-            color: #2563eb;
-            font-size: 1.5rem;
-            text-decoration: underline;
-        }
-
-        h5 {
-            color: #3b82f6;
-            font-size: 1.25rem;
-            font-variant: small-caps;
-        }
-
-        h6 {
-            color: #60a5fa;
-            font-size: 1rem;
-            text-transform: uppercase;
-        }
-
-        /* Paragraph Styling */
-        p {
-            font-size: 1rem;
-            color: #475569;
-            margin-top: 10px;
-        }
-
-        .highlight-p {
-            font-weight: 500;
-            color: #0f172a;
-        }
-    </style>
+    <title>Greeting Page</title>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Typography Mastery</h1>
-            <p class="highlight-p" style="text-align: center;">A visual demonstration of HTML headings and the CSS Box Model.</p>
-        </header>
+    <button onclick="greet()">Click Me</button>
 
-        <div class="section">
-            <h1>Heading Level 1</h1>
-            <p>The H1 tag is the most important heading on the page. It is typically used for the main title and should only appear once per page for SEO best practices.</p>
-        </div>
-
-        <div class="section">
-            <h2>Heading Level 2</h2>
-            <p>H2 tags act as subheaders for major sections of your content. They help break up long articles into digestible chunks.</p>
-        </div>
-
-        <div class="section">
-            <h3>Heading Level 3</h3>
-            <p>H3 tags are used for subsections within an H2. They provide a deeper level of hierarchy for complex topics.</p>
-        </div>
-
-        <div class="section">
-            <h4>Heading Level 4</h4>
-            <p>H4 is often used for small grouped items, sidebar titles, or minor section titles within a larger chapter.</p>
-        </div>
-
-        <div class="section">
-            <h5>Heading Level 5</h5>
-            <p>H5 headings are less common but useful for detailed technical documentation or micro-sections within an application.</p>
-        </div>
-
-        <div class="section">
-            <h6>Heading Level 6</h6>
-            <p>The smallest heading level, H6 is used for low-level organizational needs while still maintaining a semantic structure.</p>
-        </div>
-    </div>
+    <script>
+        // The function definition
+        function greet() {
+            console.log("Hello, World!"); // Prints to the browser console
+            alert("Hello, World!");      // Shows a pop-up window
+        }
+    </script>
 
 </body>
 </html>
