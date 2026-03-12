@@ -1,98 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Helping Hands NGO | Volunteer Portal</title>
-</head>
-<body bgcolor="#fdfdfd" text="#222222">
+<body>
 
-    <!-- Header Section -->
-    <h1 align="center">Helping Hands Foundation</h1>
-    <p align="center"><i>"Small Acts, Big Impact. Join us in making a difference."</i></p>    
-    <p>Helping Hands is a non-profit organization dedicated to uplifting underprivileged communities through education, healthcare, and environmental sustainability. We believe that everyone has a skill that can change a life. By volunteering with us, you contribute directly to grassroots development and gain invaluable experience in social work.</p>
-    <hr noshade size="3" color="#006600">
-    <!-- Active Projects List -->
-    <h2>Our Active Projects</h2>
-    <ul>
-        <li><b>Project Vidya:</b> Providing free weekend tuitions to primary school children.</li>
-        <li><b>Green Earth:</b> Weekly tree plantation and waste management workshops.</li>
-        <li><b>Annapurna:</b> Daily community kitchen serving nutritious meals to the homeless.</li>
-        <li><b>Health First:</b> Mobile clinics providing basic checkups in rural areas.</li>
-    </ul>
-    <hr noshade size="1">
-    <!-- Upcoming Drives Table -->
-    <h2>Upcoming Volunteer Drives</h2>
-    <table border="1" cellpadding="10" cellspacing="0" width="100%" bgcolor="#ffffff">
-        <tr bgcolor="#e6f2ff">
-            <th>Drive Name</th>
-            <th>Location</th>
-            <th>Date & Time</th>
-            <th>Volunteers Needed</th>
-        </tr>
-        <tr>
-            <td>Beach Cleanup Drive</td>
-            <td>City Marina Beach</td>
-            <td>Feb 15, 2026 | 07:00 AM</td>
-            <td>50</td>
-        </tr>
-        <tr>
-            <td>Blood Donation Camp</td>
-            <td>Community Hall</td>
-            <td>Feb 22, 2026 | 09:00 AM</td>
-            <td>20</td>
-        </tr>
-        <tr>
-            <td>Library Setup</td>
-            <td>Govt. Primary School</td>
-            <td>March 05, 2026 | 10:00 AM</td>
-            <td>10</td>
-        </tr>
-    </table>
-    <hr noshade size="1">
-    <!-- Volunteer Enrollment Form -->
-    <h2>Sign Up to Volunteer</h2>
-    <p>Register your interest below, and our coordinator will contact you for an orientation session.</p>    
-    <form action="#" method="post">
-        <table border="0" cellpadding="5">
-            <tr>
-                <td>Full Name:</td>
-                <td><input type="text" name="vname" size="35" required></td>
-            </tr>
-            <tr>
-                <td>Email Address:</td>
-                <td><input type="email" name="vemail" size="35" required></td>
-            </tr>
-            <tr>
-                <td>Preferred Project:</td>
-                <td>
-                    <select name="project">
-                        <option value="vidya">Project Vidya (Education)</option>
-                        <option value="green">Green Earth (Environment)</option>
-                        <option value="anna">Annapurna (Food)</option>
-                        <option value="health">Health First (Medical)</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Availability:</td>
-                <td>
-                    <input type="checkbox" name="days" value="weekdays"> Weekdays
-                    <input type="checkbox" name="days" value="weekends"> Weekends
-                </td>
-            </tr>
-            <tr>
-                <td valign="top">Why do you want to join?</td>
-                <td><textarea name="motive" rows="5" cols="33"></textarea></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="submit" value="Submit Application">
-                    <input type="reset" value="Clear Form">
-                </td>
-            </tr>
-        </table>
-    </form>
-    <br><hr noshade size="1">
-    <p align="center"><small>Helping Hands Foundation &copy; 2026 | Registered Non-Profit Organization</small></p>
+    <h2>Multiplication with Defaults</h2>
+    <p id="multiply-result"></p>
+
+    <script>
+        // Function with a default value for y
+        function multiply(x, y = 5) {
+            return x * y;
+        }
+
+        // Example 1: Providing both arguments (10 * 3)
+        let case1 = multiply(10, 3); 
+
+        // Example 2: Providing only one argument (10 * default 5)
+        let case2 = multiply(10); 
+
+        // Displaying results
+        document.getElementById("multiply-result").innerHTML = 
+            "10 * 3 = " + case1 + "<br>" +
+            "10 * (default) 5 = " + case2;
+    </script>
+
 </body>
 </html>
