@@ -1,85 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Global Tech Summit 2026</title>
-</head>
-<body bgcolor="#f4f4f4">
-    <!-- Main Heading and Paragraph -->
-    <h1 align="center">Global Tech Summit 2026</h1>
-    <p align="center"><i>"Defining the Future of Intelligence and Connectivity"</i></p>    
-    <p>Join us for the largest gathering of developers, engineers, and tech visionaries. This three-day event features keynote speeches from industry leaders, hands-on workshops, and networking opportunities designed to spark innovation and collaboration in the digital age.</p>
+<body>
 
-    <hr>
-    <!-- List of Workshop Topics -->
-    <h2>Key Workshop Topics</h2>
-    <ul>
-        <li><b>Generative AI:</b> From LLMs to Diffusion Models.</li>
-        <li><b>Cloud Native Architecture:</b> Scaling with Kubernetes and Docker.</li>
-        <li><b>Cybersecurity:</b> Zero Trust security models for modern enterprises.</li>
-        <li><b>Quantum Computing:</b> Understanding the next leap in processing power.</li>
-        <li><b>Web3 Development:</b> Building decentralized applications on the blockchain.</li>
-    </ul>
-    <hr>
-    <!-- Table for Event Schedule -->
-    <h2>Event Schedule</h2>
-    <table border="1" cellpadding="10" cellspacing="0" width="100%" bgcolor="white">
-        <tr bgcolor="#cccccc">
-            <th>Time Slot</th>
-            <th>Main Stage (Keynotes)</th>
-            <th>Workshop Lab A</th>
-            <th>Workshop Lab B</th>
-        </tr>
-        <tr>
-            <td>09:00 AM - 10:30 AM</td>
-            <td>Future of AI Keynote</td>
-            <td>Python for Data Science</td>
-            <td>UX/UI Trends 2026</td>
-        </tr>
-        <tr>
-            <td>11:00 AM - 12:30 PM</td>
-            <td>The Silicon Revolution</td>
-            <td>Advanced React Patterns</td>
-            <td>Ethical Hacking 101</td>
-        </tr>
-        <tr>
-            <td>01:30 PM - 03:00 PM</td>
-            <td>Panel: Tech Ethics</td>
-            <td>API Design best practices</td>
-            <td>Cloud Security Basics</td>
-        </tr>
-    </table>
-    <hr>
-    <!-- Registration Form -->
-    <h2>Register for the Conference</h2>
-    <form action="#" method="post">
-        <p>
-            Full Name:<br>
-            <input type="text" name="fullname" size="40" required>
-        </p>        
-        <p>
-            Email Address:<br>
-            <input type="email" name="email" size="40" required>
-        </p>        
-        <p>
-            Attendee Type:<br>
-            <input type="radio" name="type" value="student"> Student
-            <input type="radio" name="type" value="professional"> Professional
-            <input type="radio" name="type" value="speaker"> Speaker
-        </p>        
-        <p>
-            Select Interested Workshops:<br>
-            <input type="checkbox" name="ws" value="ai"> Generative AI
-            <input type="checkbox" name="ws" value="cloud"> Cloud Computing
-            <input type="checkbox" name="ws" value="sec"> Cybersecurity
-        </p>
-        <p>
-            Additional Comments:<br>
-            <textarea name="comments" rows="5" cols="40"></textarea>
-        </p>        
-        <p>
-            <input type="submit" value="Register Now">
-            <input type="reset" value="Clear Form">
-        </p>
-    </form>
+    <h2>Circle Area Calculator</h2>
+    <p id="area-output"></p>
+
+    <script>
+        // Function to calculate area: π * r²
+        function calculateArea(radius) {
+            return Math.PI * radius * radius;
+        }
+
+        // Example: Calculating area for radius 5
+        let r = 5;
+        let area = calculateArea(r);
+
+        // Displaying the result rounded to 2 decimal places
+        document.getElementById("area-output").innerHTML = 
+            "The area of a circle with radius " + r + " is: " + area.toFixed(2);
+    </script>
+
 </body>
 </html>
