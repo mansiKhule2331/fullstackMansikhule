@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decimal to Binary Converter</title>
+</head>
+<body>
+
+<h2>Decimal to Binary Converter</h2>
+
+<input type="number" id="num" placeholder="Enter decimal number">
+<button onclick="convertBinary()">Convert</button>
+
+<p id="result"></p>
+
+<script>
+function decimalToBinary(num) {
+    let binary = "";
+
+    while (num > 0) {
+        binary = (num % 2) + binary;
+        num = Math.floor(num / 2);
+    }
+
+    return binary || "0";
+}
+function convertBinary() {
+    let number = document.getElementById("num").value;
+    let result = decimalToBinary(number);
+
+    document.getElementById("result").innerHTML =
+        "Binary of " + number + " is " + result;
+}
+</script>
+</body>
+</html>
