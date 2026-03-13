@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,4 +31,38 @@ function showNumbers() {
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skip Multiples of 10</title>
+</head>
+<body>
+
+<h2>Numbers from 1 to 50 (Skipping multiples of 10)</h2>
+
+<button onclick="showNumbers()">Show Numbers</button>
+
+<p id="result"></p>
+
+<script>
+function showNumbers() {
+
+    var output = "";
+
+    for (var i = 1; i <= 50; i++) {
+
+        if (i % 10 === 0) {
+            continue;   // Skip multiples of 10
+        }
+
+        output = output + i + " ";
+    }
+
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+
+</body>
+>>>>>>> d75d0fedde779b041dc6db64867105cc66d8a9ec
 </html>

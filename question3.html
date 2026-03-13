@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Voting Eligibility Checker</title>
-</head>
 <body>
-    <h2>Check Voting Eligibility</h2>
-    <input type="number" id="age" placeholder="Enter your age">
-    <button onclick="checkEligibility()">Check</button>
-    <p id="result"></p>
+
+    <h2>Square Calculator</h2>
+    <p id="square-result"></p>
+
     <script>
-        function checkEligibility() {
-            var age = document.getElementById("age").value;
-            if (age === "") {
-                document.getElementById("result").innerHTML = "Please enter your age";
-                return;
-            }
-            age = parseInt(age);
-            if (age >= 18) {
-                document.getElementById("result").innerHTML = "Eligible to Vote";
-            } else {
-                document.getElementById("result").innerHTML = "Not Eligible to Vote";
-            }
+        // Function to calculate the square
+        function findSquare(num) {
+            return num * num;
         }
+
+        // Example: Finding the square of 8
+        let number = 8;
+        let result = findSquare(number);
+        
+        // Displaying the result on the page
+        document.getElementById("square-result").innerHTML = 
+            "The square of " + number + " is: " + result;
     </script>
+
 </body>
 </html>

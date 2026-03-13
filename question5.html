@@ -1,34 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Grade Calculator</title>
-</head>
 <body>
-    <h2>Grade Calculator</h2>
-    <input type="number" id="score" placeholder="Enter your score">
-    <button onclick="calculateGrade()">Check Grade</button>
-    <p id="result"></p>
+
+    <h2>Multiplication Table</h2>
+    <div id="table-output"></div>
+
     <script>
-        function calculateGrade() {
-            var score = document.getElementById("score").value;
-            if (score === "") {
-                document.getElementById("result").innerHTML = "Please enter your score";
-                return;
+        function printTable(num) {
+            let output = "<h3>Table for " + num + "</h3>";
+            
+            for (let i = 1; i <= 10; i++) {
+                // Calculate and format each line
+                output += num + " x " + i + " = " + (num * i) + "<br>";
             }
-            score = parseInt(score);
-            if (score >= 90) {
-                document.getElementById("result").innerHTML = "Grade: A";
-            }
-            else if (score >= 80) {
-                document.getElementById("result").innerHTML = "Grade: B";
-            }
-            else if (score >= 70) {
-                document.getElementById("result").innerHTML = "Grade: C";
-            }
-            else {
-                document.getElementById("result").innerHTML = "Grade: F";
-            }
+            
+            // Print the final result to the page
+            document.getElementById("table-output").innerHTML = output;
         }
+
+        // Example: Print the table for 7
+        printTable(7);
     </script>
+
 </body>
 </html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,4 +37,44 @@ function showTable() {
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even Multiplication Grid</title>
+</head>
+<body>
+
+<h2>5x5 Multiplication Table (Even Numbers Only)</h2>
+
+<button onclick="showTable()">Show Table</button>
+
+<p id="result"></p>
+
+<script>
+function showTable() {
+
+    var output = "";
+
+    for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= 5; j++) {
+
+            var result = i * j;
+
+            if (result % 2 === 0) {
+                output += result + " ";
+            } else {
+                output += "- ";
+            }
+
+        }
+        output += "<br>";
+    }
+
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+
+</body>
+>>>>>>> d75d0fedde779b041dc6db64867105cc66d8a9ec
 </html>

@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>FizzBuzz Program</title>
-</head>
 <body>
-    <h2>FizzBuzz Checker</h2>
-    <input type="number" id="number" placeholder="Enter a number">
-    <button onclick="checkFizzBuzz()">Check</button>
-    <p id="result"></p>
+
+    <h2>Multiplication with Defaults</h2>
+    <p id="multiply-result"></p>
+
     <script>
-        function checkFizzBuzz() {
-            var num = document.getElementById("number").value;
-            if (num === "") {
-                document.getElementById("result").innerHTML = "Please enter a number";
-                return;
-            }
-            num = parseInt(num);
-            if (num % 3 === 0 && num % 5 === 0) {
-                document.getElementById("result").innerHTML = "FizzBuzz";
-            }
-            else if (num % 3 === 0) {
-                document.getElementById("result").innerHTML = "Fizz";
-            }
-            else if (num % 5 === 0) {
-                document.getElementById("result").innerHTML = "Buzz";
-            }
-            else {
-                document.getElementById("result").innerHTML = "Not a multiple of 3 or 5";
-            }
+        // Function with a default value for y
+        function multiply(x, y = 5) {
+            return x * y;
         }
+
+        // Example 1: Providing both arguments (10 * 3)
+        let case1 = multiply(10, 3); 
+
+        // Example 2: Providing only one argument (10 * default 5)
+        let case2 = multiply(10); 
+
+        // Displaying results
+        document.getElementById("multiply-result").innerHTML = 
+            "10 * 3 = " + case1 + "<br>" +
+            "10 * (default) 5 = " + case2;
     </script>
+
 </body>
 </html>

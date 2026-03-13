@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,4 +29,36 @@ function calculateSum() {
 }
 </script>
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Divisible by 7 Sum</title>
+</head>
+<body>
+
+<h2>Sum of Numbers Divisible by 7 (1 - 200)</h2>
+
+<button onclick="calculateSum()">Calculate Sum</button>
+
+<p id="result"></p>
+
+<script>
+function calculateSum() {
+
+    var sum = 0;
+
+    for (var i = 1; i <= 200; i++) {
+
+        if (i % 7 === 0) {
+            sum = sum + i;
+        }
+
+    }
+
+    document.getElementById("result").innerHTML = "Final Sum: " + sum;
+}
+</script>
+</body>
+>>>>>>> d75d0fedde779b041dc6db64867105cc66d8a9ec
 </html>
