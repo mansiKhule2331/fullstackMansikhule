@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fruit Search Filter</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:#121212;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:#1e1e1e;
+    padding:25px;
+    border-radius:10px;
+    width:300px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    padding:8px;
+    background:#333;
+    margin:5px 0;
+    border-radius:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Fruit Search</h2>
+
+<input type="text" id="searchBox" placeholder="Search fruit..." onkeyup="searchItem()">
+
+<ul id="fruitList">
+<li>Apple</li>
+<li>Banana</li>
+<li>Mango</li>
+<li>Orange</li>
+<li>Pineapple</li>
+<li>Grapes</li>
+<li>Watermelon</li>
+<li>Strawberry</li>
+</ul>
+
+</div>
+
+<script>
+
+function searchItem(){
+
+let input = document.getElementById("searchBox").value.toLowerCase();
+
+let items = document.querySelectorAll("#fruitList li");
+
+items.forEach(function(item){
+
+let text = item.textContent.toLowerCase();
+
+if(text.includes(input)){
+item.style.display = "block";
+}else{
+item.style.display = "none";
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

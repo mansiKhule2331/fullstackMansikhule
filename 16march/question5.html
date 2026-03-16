@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quiz App</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:#121212;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.quiz-container{
+    background:#1e1e1e;
+    padding:30px;
+    border-radius:10px;
+    width:400px;
+}
+
+button{
+    display:block;
+    width:100%;
+    margin:8px 0;
+    padding:10px;
+    border:none;
+    background:#333;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#555;
+}
+
+#feedback{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+#score{
+    margin-top:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="quiz-container">
+
+<h3 id="question">Question will appear here</h3>
+
+<div id="answers"></div>
+
+<p id="feedback"></p>
+<p id="score"></p>
+
+</div>
+
+<script>
+
+let quiz = [
+{
+question: "What does HTML stand for?",
+answers: [
+"Hyper Text Markup Language",
+"High Transfer Machine Language",
+"Home Tool Markup Language",
+"Hyperlinks Text Machine Language"
+],
+correct: 0
+},
+
+{
+question: "Which language is used for styling web pages?",
+answers: ["HTML","CSS","Python","C++"],
+correct: 1
+},
+
+{
+question: "Which language is used for web page logic?",
+answers: ["Java","C","JavaScript","PHP"],
+correct: 2
+}
+
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function loadQuestion(){
+
+let q = quiz[currentQuestion];
+
+document.getElementById("question").innerText = q.question;
+
+let answersDiv = document.getElementById("answers");
+answersDiv.innerHTML = "";
+
+q.answers.forEach((answer,index)=>{
+
+let btn = document.createElement("button");
+btn.innerText = answer;
+
+btn.onclick = function(){
+checkAnswer(index);
+};
+answersDiv.appendChild(btn);
+});
+}
+function checkAnswer(index){
+let correctIndex = quiz[currentQuestion].correct;
+if(index === correctIndex){
+document.getElementById("feedback").innerText = "Correct!";
+score++;
+}
+else{
+document.getElementById("feedback").innerText = "Incorrect!";
+}
+currentQuestion++;
+if(currentQuestion < quiz.length){
+setTimeout(()=>{
+document.getElementById("feedback").innerText="";
+loadQuestion();
+},1000);
+}
+else{
+document.getElementById("question").innerText = "Quiz Finished!";
+document.getElementById("answers").innerHTML="";
+document.getElementById("score").innerText = "Your Score: " + score + "/" + quiz.length;
+}
+}
+loadQuestion();
+
+</script>
+
+</body>
+</html>

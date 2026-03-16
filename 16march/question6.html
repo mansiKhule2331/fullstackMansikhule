@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tip Calculator</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:#121212;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:#1e1e1e;
+    padding:30px;
+    border-radius:10px;
+    width:350px;
+}
+
+input, select{
+    width:100%;
+    padding:8px;
+    margin:8px 0;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#28a745;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1e7e34;
+}
+
+#result{
+    margin-top:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Tip Calculator</h2>
+
+<label>Bill Amount</label>
+<input type="number" id="bill" placeholder="Enter bill amount">
+
+<label>Tip Percentage</label>
+<select id="tip">
+<option value="5">5%</option>
+<option value="10">10%</option>
+<option value="15">15%</option>
+<option value="20">20%</option>
+</select>
+
+<label>Number of People</label>
+<input type="number" id="people" placeholder="Enter number of people">
+
+<button onclick="calculateTip()">Calculate</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function calculateTip(){
+
+let bill = document.getElementById("bill").value;
+let tipPercent = document.getElementById("tip").value;
+let people = document.getElementById("people").value;
+
+if(bill === "" || people === ""){
+alert("Please enter all values");
+return;
+}
+
+let tipAmount = bill * (tipPercent/100);
+
+let totalBill = Number(bill) + tipAmount;
+
+let tipPerPerson = tipAmount / people;
+
+let totalPerPerson = totalBill / people;
+
+document.getElementById("result").innerHTML =
+"Tip per person: ₹" + tipPerPerson.toFixed(2) +
+"<br>Total per person: ₹" + totalPerPerson.toFixed(2);
+
+}
+
+</script>
+
+</body>
+</html>
