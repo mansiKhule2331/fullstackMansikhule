@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Multiplication with Defaults</h2>
+    <p id="multiply-result"></p>
+
+    <script>
+        // Function with a default value for y
+        function multiply(x, y = 5) {
+            return x * y;
+        }
+
+        // Example 1: Providing both arguments (10 * 3)
+        let case1 = multiply(10, 3); 
+
+        // Example 2: Providing only one argument (10 * default 5)
+        let case2 = multiply(10); 
+
+        // Displaying results
+        document.getElementById("multiply-result").innerHTML = 
+            "10 * 3 = " + case1 + "<br>" +
+            "10 * (default) 5 = " + case2;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Even or Odd Checker</h2>
+    <p id="check-result"></p>
+
+    <script>
+        // The requested function
+        function isEven(n) {
+            // Returns true if remainder is 0 when divided by 2
+            return n % 2 === 0;
+        }
+
+        // Example: Checking the number 10
+        let num = 10;
+        let result = isEven(num);
+        
+        // Displaying "True" or "False" on the page
+        document.getElementById("check-result").innerHTML = 
+            "Is " + num + " even? " + (result ? "True" : "False");
+    </script>
+
+</body>
+</html>

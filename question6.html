@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Circle Area Calculator</h2>
+    <p id="area-output"></p>
+
+    <script>
+        // Function to calculate area: π * r²
+        function calculateArea(radius) {
+            return Math.PI * radius * radius;
+        }
+
+        // Example: Calculating area for radius 5
+        let r = 5;
+        let area = calculateArea(r);
+
+        // Displaying the result rounded to 2 decimal places
+        document.getElementById("area-output").innerHTML = 
+            "The area of a circle with radius " + r + " is: " + area.toFixed(2);
+    </script>
+
+</body>
+</html>

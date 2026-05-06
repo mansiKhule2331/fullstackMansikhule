@@ -1,0 +1,39 @@
+.product-container {
+  display: grid;
+  gap: 2rem;
+  padding: 20px;
+  grid-template-columns: 1fr; /* Single column for Mobile */
+}
+.gallery
+{
+
+  display: cover;
+}
+
+/* Wide Screens (Desktop) */
+@media (min-width: 800px) {
+  .product-container {
+    grid-template-columns: 1.5fr 1fr; /* Image takes more space than info */
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.buy-btn {
+  width: 100%;
+  padding: 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+

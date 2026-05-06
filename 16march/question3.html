@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Digital Clock</title>
+
+<style>
+
+body{
+    background:#121212;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial;
+}
+
+.clock{
+    background:#1e1e1e;
+    color:#00ffcc;
+    font-size:50px;
+    padding:30px 60px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="clock" id="clock">
+00:00:00
+</div>
+
+<script>
+
+function updateClock(){
+
+    let now = new Date();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    // Add leading zero
+    if(hours < 10) hours = "0" + hours;
+    if(minutes < 10) minutes = "0" + minutes;
+    if(seconds < 10) seconds = "0" + seconds;
+
+    let time = hours + ":" + minutes + ":" + seconds;
+
+    document.getElementById("clock").innerHTML = time;
+}
+
+// update every second
+setInterval(updateClock,1000);
+
+// run immediately
+updateClock();
+
+</script>
+
+</body>
+</html>
