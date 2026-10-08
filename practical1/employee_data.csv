@@ -1,0 +1,11 @@
+EmpID,Name,Age,Department,Salary
+101,Mansi,22,IT,55000
+102,Rahul,24,HR,42000
+103,Priya,,Finance,48000
+104,Amit,25,,65000
+105,Sneha,23,Marketing,
+106,Rohit,,Finance,52000
+107,Pooja,26,IT,45000
+108,Akash,21,,37000
+109,Neha,24,Marketing,41000
+110,Karan,27,Finance,

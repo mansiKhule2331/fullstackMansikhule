@@ -1,0 +1,11 @@
+EmpID,Name,Age,Department,Salary
+105,Sneha,23.0,Marketing,0.0
+110,Karan,27.0,Finance,0.0
+108,Akash,21.0,Not Assigned,37000.0
+109,Neha,24.0,Marketing,41000.0
+102,Rahul,24.0,HR,42000.0
+107,Pooja,26.0,IT,45000.0
+103,Priya,24.0,Finance,48000.0
+106,Rohit,24.0,Finance,52000.0
+101,Mansi,22.0,IT,55000.0
+104,Amit,25.0,Not Assigned,65000.0
