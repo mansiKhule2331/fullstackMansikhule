@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Program</title>
+</head>
+<body>
+    <h2>Countdown from 10</h2>
+    <p id="result"></p>
+    <script>
+        let output = "";
+        for (let i = 10; i >= 1; i--) {
+            output += i + "<br>";
+        }
+        output += "Blast off!";
+        document.getElementById("result").innerHTML = output;
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twin Primes</title>
+</head>
+<body>
+<h2>Twin Primes less than 1000</h2>
+<button onclick="findTwinPrimes()">Find Twin Primes</button>
+<p id="result"></p>
+<script>
+// Function to check if number is prime
+function isPrime(num) {
+    if (num < 2) return false;
+
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+// Function to find twin primes
+function findTwinPrimes() {
+    let output = "";
+
+    for (let i = 3; i < 1000; i++) {
+        if (isPrime(i) && isPrime(i + 2)) {
+            output += "(" + i + ", " + (i + 2) + ") ";
+        }
+    }
+
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+</body>
+</html>

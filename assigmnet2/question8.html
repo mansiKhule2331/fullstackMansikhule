@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Check</title>
+</head>
+<body>
+
+    <h2>Password Verification</h2>
+    <p id="result"></p>
+
+    <script>
+        let password = "";
+
+        while (password !== "1234") {
+            password = prompt("Enter the password:");
+        }
+
+        document.getElementById("result").innerHTML =
+            "Correct Password! Access Granted.";
+    </script>
+
+</body>
+</html>

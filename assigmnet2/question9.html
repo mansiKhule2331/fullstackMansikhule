@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Roll Simulation</title>
+</head>
+<body>
+
+    <h2>Rolling a 6-Sided Die</h2>
+    <button onclick="rollDice()">Roll Dice</button>
+    <p id="result"></p>
+
+    <script>
+        function rollDice() {
+            let output = "";
+            let dice = 0;
+
+            while (dice !== 6) {
+                dice = Math.floor(Math.random() * 6) + 1;
+                output += "Rolled: " + dice + "<br>";
+            }
+
+            output += "<strong>Hit 6! Stopping...</strong>";
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>

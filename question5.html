@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Multiplication Table</h2>
+    <div id="table-output"></div>
+
+    <script>
+        function printTable(num) {
+            let output = "<h3>Table for " + num + "</h3>";
+            
+            for (let i = 1; i <= 10; i++) {
+                // Calculate and format each line
+                output += num + " x " + i + " = " + (num * i) + "<br>";
+            }
+            
+            // Print the final result to the page
+            document.getElementById("table-output").innerHTML = output;
+        }
+
+        // Example: Print the table for 7
+        printTable(7);
+    </script>
+
+</body>
+</html>

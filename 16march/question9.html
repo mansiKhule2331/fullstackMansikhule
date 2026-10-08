@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BMI Calculator</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:#121212;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:#1e1e1e;
+    padding:25px;
+    border-radius:10px;
+    width:300px;
+    text-align:center;
+}
+
+input{
+    width:90%;
+    padding:8px;
+    margin:8px 0;
+}
+
+button{
+    padding:10px 20px;
+    background:#28a745;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1e7e34;
+}
+
+#result{
+    margin-top:15px;
+    font-size:18px;
+}
+
+/* BMI Category Colors */
+
+.underweight{
+    color:orange;
+}
+
+.normal{
+    color:green;
+}
+
+.overweight{
+    color:red;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>BMI Calculator</h2>
+
+<input type="number" id="weight" placeholder="Weight (kg)">
+<input type="number" id="height" placeholder="Height (meters)">
+
+<button onclick="calculateBMI()">Calculate BMI</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+function calculateBMI(){
+
+let weight = document.getElementById("weight").value;
+let height = document.getElementById("height").value;
+
+if(weight === "" || height === ""){
+alert("Please enter weight and height");
+return;
+}
+
+let bmi = weight / (height * height);
+
+let result = document.getElementById("result");
+
+let category = "";
+
+if(bmi < 18.5){
+category = "Underweight";
+result.className = "underweight";
+}
+else if(bmi >= 18.5 && bmi < 25){
+category = "Normal";
+result.className = "normal";
+}
+else{
+category = "Overweight";
+result.className = "overweight";
+}
+
+result.innerHTML = "BMI: " + bmi.toFixed(2) + " (" + category + ")";
+
+}
+
+</script>
+
+</body>
+</html>

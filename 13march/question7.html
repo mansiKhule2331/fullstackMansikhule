@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Digits</title>
+</head>
+<body>
+
+<h2>Sum of Digits Calculator</h2>
+<input type="number" id="num" placeholder="Enter a number">
+<button onclick="calculateSum()">Calculate</button>
+<p id="result"></p>
+<script>
+function sumOfDigits(num) {
+    let sum = 0;
+    while (num > 0) {
+        let digit = num % 10;
+        sum = sum + digit;
+        num = Math.floor(num / 10);
+    }
+    return sum;
+}
+function calculateSum() {
+    let number = document.getElementById("num").value;
+    let result = sumOfDigits(number);
+
+    document.getElementById("result").innerHTML =
+        "Sum of digits of " + number + " is " + result;
+}
+</script>
+</body>
+</html>

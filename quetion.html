@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General City Appointment</title>
+    </head>
+<body>
+    <h1>Health Care Appointment</h1>
+    <p>Welcome to our online booking portal. We provide high-quality medical care across various specialties. Please check doctor availability below before scheduling your visit.</p>
+
+    <!-- List of Departments -->
+    <h2>Our Specialised Departments</h2>
+    <ul>
+        <li>Cardiology</li>
+        <li>Dermatology</li>
+        <li>Neurology</li>
+        <li>Pediatrics</li>
+        <li>General Surgery</li>
+    </ul>
+    <!-- Table for Doctor Availability -->
+    <h2>Doctor Availability Schedule</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Doctor Name</th>
+                <th>Department</th>
+                <th>Available Days</th>
+                <th>Time Slot</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dr. Smith</td>
+                <td>Cardiology</td>
+                <td>Mon, Wed, Fri</td>
+                <td>09:00 AM - 01:00 PM</td>
+            </tr>
+            <tr>
+                <td>Dr. Johnson</td>
+                <td>Pediatrics</td>
+                <td>Tue, Thu</td>
+                <td>10:00 AM - 04:00 PM</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Appointment Form -->
+    <h2>Book an Appointment</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="dept">Select Department:</label>
+            <select id="dept" name="dept">
+                <option value="cardio">Cardiology</option>
+                <option value="peds">Pediatrics</option>
+                <option value="neuro">Neurology</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+            <label for="notes">Reason for Visit (optional):</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+        </div>
+        <button type="submit">Submit Request</button>
+    </form>
+</body>
+</html>

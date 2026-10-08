@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Task Manager App</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:#121212;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:#1e1e1e;
+    padding:20px;
+    border-radius:10px;
+    width:350px;
+}
+
+h2{
+    text-align:center;
+}
+
+input{
+    width:70%;
+    padding:8px;
+}
+
+button{
+    padding:8px 12px;
+    background:#28a745;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1e7e34;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+    margin-top:15px;
+}
+
+li{
+    background:#333;
+    margin:5px 0;
+    padding:10px;
+    display:flex;
+    justify-content:space-between;
+    border-radius:5px;
+}
+
+.delete{
+    background:red;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Task Manager</h2>
+
+<input type="text" id="taskInput" placeholder="Enter task">
+<button onclick="addTask()">Add</button>
+
+<ul id="taskList"></ul>
+
+</div>
+
+<script>
+
+let tasks = [];
+
+function addTask(){
+
+    let input = document.getElementById("taskInput");
+    let task = input.value;
+
+    if(task === ""){
+        alert("Please enter a task");
+        return;
+    }
+
+    tasks.push(task);
+    input.value = "";
+
+    displayTasks();
+}
+
+function displayTasks(){
+
+    let list = document.getElementById("taskList");
+    list.innerHTML = "";
+
+    for(let i=0; i<tasks.length; i++){
+
+        let li = document.createElement("li");
+
+        li.innerHTML = tasks[i] +
+        `<button class="delete" onclick="deleteTask(${i})">Delete</button>`;
+
+        list.appendChild(li);
+    }
+}
+
+function deleteTask(index){
+
+    tasks.splice(index,1);
+    displayTasks();
+
+}
+
+</script>
+
+</body>
+</html>
